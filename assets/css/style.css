@@ -11,6 +11,7 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
+  font-size: 16px;
 }
 
 a {
@@ -806,6 +807,7 @@ section {
 .skills .progress .skill {
   padding: 10px 0;
   margin: 0 0 6px 0;
+  font-size: 16px;
   text-transform: uppercase;
   display: block;
   font-weight: 600;
@@ -816,6 +818,7 @@ section {
 .skills .progress .skill .val {
   float: right;
   font-style: normal;
+
 }
 
 .skills .progress-bar-wrap {
