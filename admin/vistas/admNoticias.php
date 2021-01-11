@@ -9,23 +9,19 @@
 <table class="table table-light table-bordered-black">
     <tbody>
         <tr>
-            <th width="15%" class="text-center">Nombre</th>
+            <th width="15%" class="text-center">Titulo</th>
             <th width="15%" class="text-center">Descripcion</th>
-            <th width="15%" class="text-center">Precio</th>
+            <th width="15%" class="text-center">Contenido</th>
         </tr>
 
 <?php  foreach($not as $noti){?>
   <tr>
-            <form action="../includes/edProduc.php" enctype="multipart/form-data" method="post">
-            <td width="15%" class="text-center"><input class="form-control" placeholder="<?php echo  $produ['nombre'];   ?>" name="nombre" id="nombre" type="text" ></td>
-            <td width="15%" class="text-center"> <input class="form-control" placeholder="<?php echo  $produ['descripcion'];   ?>" name="descripcion" id="descripcion" type="text" ></td>
-            <td width="15%" class="text-center"><input class="form-control" placeholder="<?php echo  $produ['precio'];   ?>" name="precio" id="precio" type="text" > </td>
-            <td width="15%" class="text-center">
-												<input class="btn btn-primary"  name="imagen" id="imagen" type="file">
-                                            </td>
+            <form action="../includes/edNotic.php" enctype="multipart/form-data" method="post">
+            <td width="15%" class="text-center"><input class="form-control" placeholder="<?php echo  $noti['titulo'];   ?>" name="nombre" id="titulo" type="text" ></td>
+            <td width="15%" class="text-center"> <input class="form-control" placeholder="<?php echo  $noti['descripcion'];   ?>" name="descripcion" id="descripcion" type="text" ></td>
+            <td width="15%" class="text-center"><input class="form-control" placeholder="<?php echo  $noti['contenido'];   ?>" name="precio" id="contenido" type="text" > </td>
             <td width="15%" class="text-center">
           <input type="hidden" name="id" id="id" value="<?php echo $produ['id']?>">
-          <input type="hidden" name="dir" id="dir" value="<?php echo $produ['img']?>">
           <button class="btn btn-primary" 
               name="btnAccion" 
               value="editar" 

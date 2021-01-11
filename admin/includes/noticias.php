@@ -12,18 +12,18 @@ class noticias extends db{
         return $lista;
     }
     public function editarNoticia($id,$titulo,$descripcion,$contenido){
-        $query = $this->connect()->prepare('UPDATE `tiendap`.`productos` SET `nombre` = :nombre , `descripcion` = :descripcion , `precio` = :costo , `img` = :dir WHERE `id` = :id; ');
-        echo "".$id.$nombre.$descripcion.$precio.$dir;
-        $query->execute(['id'=>$id,'nombre'=>$nombre,'descripcion'=>$descripcion,'costo'=>$precio,'dir'=>$dir ]);
+        $query = $this->connect()->prepare('UPDATE `pagina`.`noticias` SET `titulo` = :titulo , `descripcion` = :descripcion , `contenido` = :contenido;');
+        echo "".$id.$titulo.$descripcion.$contenido;
+        $query->execute(['id'=>$id,'titulo'=>$titulo,'descripcion'=>$descripcion,'contenido'=>$contenido]);
     }
 
-    public function agregarProd($titulo,$descripcion,$contenido){
-        $query = $this->connect()->prepare('INSERT INTO `tiendap`.`productos` (`id`, `nombre`, `descripcion`, `precio`, `img`) VALUES (NULL, :nombre, :descripcion, :precio, :img);');
-        $query->execute(['nombre'=>$nombre,'descripcion'=>$descripcion,'precio'=>$precio,'img'=>$ruta ]);
+    public function agregarNoticia($titulo,$descripcion,$contenido){
+        $query = $this->connect()->prepare('INSERT INTO `pagina`.`noticias` (`id`, `titulo`, `descripcion`, `contenido`) VALUES (NULL, :titulo, :descripcion, :contenido);');
+        $query->execute(['titulo'=>$titulo,'descripcion'=>$descripcion,'contenido'=>$contenido]);
     }
 
     public function eliminar($id){
-        $query = $this->connect()->prepare('DELETE FROM `tiendap`.`productos` WHERE `id` = :id; ');
+        $query = $this->connect()->prepare('DELETE FROM `pagina`.`noticias` WHERE `id` = :id; ');
         $query->execute(['id'=>$id ]);
     }
 
