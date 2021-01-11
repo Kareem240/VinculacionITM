@@ -17,11 +17,11 @@ if(isset($_SESSION['user'])){
                 <div class="container">
                     <h1>No tienes permisos de administrador</h1>
                     
-                    <a href='http://localhost/carrito' class='badge  badge-success'>Regresar a la tienda</a>
+                    <a href='http://localhost/VinculacionITM' class='badge  badge-success'>Regresar a la tienda</a>
                 </div>
                 </div>
         <?php
-        echo "<a href='http://localhost/proyecto/includes/logout.php' class='badge  badge-success'>Regresar </a></h1>";
+        echo "<a href='http://localhost/VinculacionITM/admin/includes/logout.php' class='badge  badge-success'>Regresar </a></h1>";
     }
     
     
@@ -45,7 +45,7 @@ if(isset($_SESSION['user'])){
                 <div class="container">
                     <h1>No tienes permisos de administrador</h1>
                     
-                    <a href='http://localhost/carrito' class='badge  badge-success'>Regresar a la tienda</a>
+                    <a href='http://localhost/VinculacionITM' class='badge  badge-success'>Regresar a la tienda</a>
                 </div>
                 </div>
             <?php

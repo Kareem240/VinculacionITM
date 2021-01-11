@@ -11,7 +11,7 @@ $cuentas=$user->verCuentas();
 
 <br>
    
-<h1><?php echo $user->getNombre();?></h1> <br> <h2>Para hacer un cambio llena los campos y selecciona "editar" para  agregar los datos correspondientes</h2><br>
+<h1><?php echo $user->getNombre();?></h1> <br> <h2>Para hacer un cambio llena los campos y selecciona "editar" para  actualizar la informacion</h2><br>
  <div class="row">
 
  <body>
