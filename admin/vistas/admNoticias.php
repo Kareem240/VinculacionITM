@@ -1,8 +1,8 @@
 <?php
     include_once 'head.php';
     include_once '../includes/productos.php';
-    $producto = new productos();
-    $prod=$producto->verProductos();
+    $noticia = new noticias();
+    $noti=$noticia->verNoticias();
 
 ?>
 <body>

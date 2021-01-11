@@ -1,15 +1,15 @@
 <?php 
-    include 'productos.php';
-    $produc = new productos();
+    include 'noticias.php';
+    $notic = new noticias();
     if($_POST)
     
     switch($_POST['btnAccion']){
-        case 'Agregar producto':
+        case 'Agregar noticia':
             $ruta='img/'.$_FILES['imagen']['name'];
             move_uploaded_file($_FILES['imagen']['tmp_name'],"../../".$ruta);
-            $nombre=$_POST['nombre'];
+            $titulo=$_POST['nombre'];
             $descripcion=$_POST['descripcion'];
-            $precio=$_POST['precio'];
+            $contenido=$_POST['precio'];
             $produc->agregarProd($nombre,$descripcion,$precio,$ruta);
             echo "<h1>Producto agregado exitosamente</h1>";
         break;
