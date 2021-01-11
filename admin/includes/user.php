@@ -18,7 +18,7 @@ class User extends DB{
     }
 
     public function nuevoUsuario($nombre, $apellido,$correo,$contraseña){
-        $query = $this->connect()->prepare('INSERT INTO `tiendap`.`usuarios` (`nombre`, `apellido`, `correo`, `password`, `tipo`) VALUES (:nom, :app, :corr,:clav,"usuario"); ');
+        $query = $this->connect()->prepare('INSERT INTO `vinculacion`.`usuarios` (`nombre`, `apellido`, `correo`, `password`, `tipo`) VALUES (:nom, :app, :corr,:clav,"usuario"); ');
         $query->execute(['nom'=>$nombre ,'app'=>$apellido,'corr'=>$correo,'clav'=>$contraseña ]);
                         
 
@@ -38,7 +38,7 @@ class User extends DB{
     }
 
     public function edCuenta($id,$nombre,$apellido,$correo,$clave,$tipo){
-        $query = $this->connect()->prepare('UPDATE `tiendap`.`usuarios` SET `nombre` = :nombre , `apellido` = :apellido , `correo` = :correo , `password` = :clave , `tipo` = :tipo WHERE `id` = :id; ');
+        $query = $this->connect()->prepare('UPDATE `vinculacion`.`usuarios` SET `nombre` = :nombre , `apellido` = :apellido , `correo` = :correo , `password` = :clave , `tipo` = :tipo WHERE `id` = :id; ');
         
         $query->execute(['id'=>$id,'nombre'=>$nombre,'apellido'=>$apellido,'correo'=>$correo,'clave'=>$clave,'tipo'=>$tipo ]);
                         
@@ -46,16 +46,16 @@ class User extends DB{
     }
 
     public function eliminar($id){
-        $query = $this->connect()->prepare('DELETE FROM `tiendap`.`usuarios` WHERE `id` = :id; ');
+        $query = $this->connect()->prepare('DELETE FROM `vinculacion`.`usuarios` WHERE `id` = :id; ');
         $query->execute(['id'=>$id ]);
     }
     public function eliminarCom($id){
-        $query = $this->connect()->prepare('DELETE FROM `tiendap`.`comentarios` WHERE `id` = :id; ');
+        $query = $this->connect()->prepare('DELETE FROM `vinculacion`.`comentarios` WHERE `id` = :id; ');
         $query->execute(['id'=>$id ]);
     }
 
     public function serVendedor($id){
-        $query = $this->connect()->prepare('UPDATE `tiendap`.`usuarios` SET `tipo` = "vendedor" WHERE `id` = :id;');
+        $query = $this->connect()->prepare('UPDATE `vinculacion`.`usuarios` SET `tipo` = "vendedor" WHERE `id` = :id;');
         $query->execute(['id'=>$id ]);
                         
 

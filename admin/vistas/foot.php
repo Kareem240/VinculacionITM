@@ -1,4 +1,4 @@
-<div class="col-12 text-center">© <?php echo date("Y"); ?> Copyright  Equipo dinamita  2020</div>
+<div class="col-12 text-center">© <?php echo date("Y"); ?> Copyright  Equipo dinamita </div>
 </body>
 </html>
 

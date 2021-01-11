@@ -37,8 +37,6 @@ include_once 'headUn.php';
         									name="btnAccion"
         									value="Iniciar sesion">
 										</div>
-									<div class="panel-footer ">
-										¿No tienes cuenta?  <a href="vistas/registro.php" onClick=""> Registrate </a>
 									</div>
 									</div>
 								</div>

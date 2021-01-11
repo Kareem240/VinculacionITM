@@ -45,7 +45,7 @@ if(isset($_SESSION['user'])){
                 <div class="container">
                     <h1>No tienes permisos de administrador</h1>
                     
-                    <a href='http://localhost/VinculacionITM' class='badge  badge-success'>Regresar a la tienda</a>
+                    <a href='http://localhost/VinculacionITM' class='badge  badge-success'>Regresar a la pagina</a>
                 </div>
                 </div>
             <?php
