@@ -1,6 +1,6 @@
 <?php
     include_once 'head.php';
-    include_once '../includes/productos.php';
+    include_once '../includes/noticias.php';
     $noticia = new noticias();
     $noti=$noticia->verNoticias();
 
@@ -14,7 +14,7 @@
             <th width="15%" class="text-center">Precio</th>
         </tr>
 
-<?php  foreach($prod as $produ){?>
+<?php  foreach($not as $noti){?>
   <tr>
             <form action="../includes/edProduc.php" enctype="multipart/form-data" method="post">
             <td width="15%" class="text-center"><input class="form-control" placeholder="<?php echo  $produ['nombre'];   ?>" name="nombre" id="nombre" type="text" ></td>
