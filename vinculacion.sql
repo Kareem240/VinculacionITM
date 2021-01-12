@@ -32,7 +32,7 @@ CREATE TABLE `users` (
 /*Data for the table `users` */
 
 insert  into `users`(`id`,`username`,`password`,`created_at`) values 
-(1,'karim','$2y$10$I9nAJkxu/qfqSEQypTCkxeJsp2rV2vKzkwnaMMHedXuXC3abNQG7S','2021-01-11 18:59:03');
+(1,'admin','$2y$10$COLB/sIaosyMEhaRHC26rOG/0DQ1Expo.4J.VG6pMSFGepJLvXQle','2021-01-11 18:59:03');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
