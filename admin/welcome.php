@@ -23,9 +23,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <h1 style="text-indent: 80px">Hola, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Bienvenid@ al administrador de Vinculacion ITM.</h1>
         
     </div>
-    <p>
+  <!--  <p>
         <a href="reset-password.php" class="btn btn-warning">Cambia tu contraseña</a>
-    </p>
+    </p> -->
 
 
 </body>
