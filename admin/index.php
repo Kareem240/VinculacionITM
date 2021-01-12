@@ -1,16 +1,16 @@
-<link href="style.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
 <?php
 // Initialize the session
 session_start();
  
 // Check if the user is already logged in, if yes then redirect him to welcome page
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-  header("location: welcome.php");
+  header("location: vistas/welcome.php");
   exit;
 }
  
 // Include config file
-require_once "config.php";
+require_once "includes/config.php";
  
 // Define variables and initialize with empty values
 $username = $password = "";
@@ -65,7 +65,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["username"] = $username;                            
                             
                             // Redirect user to welcome page
-                            header("location: welcome.php");
+                            header("location: vistas/welcome.php");
                         } else{
                             // Display an error message if password is not valid
                             $password_err = "La contraseña que has ingresado no es válida.";
