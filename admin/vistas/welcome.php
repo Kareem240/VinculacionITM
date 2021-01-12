@@ -4,19 +4,11 @@ session_start();
  
 // Check if the user is logged in, if not then redirect him to login page
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-    header("location: index.php");
+    header("location: ../index.php");
     exit;
 }
-?>
+ include_once 'head.php'; ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8"> 
-
-<?php include_once 'head.php'; ?>
-
-</head>
 <body>
     <div class="page-header">
         <br><br><br>
