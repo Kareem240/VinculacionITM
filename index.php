@@ -88,14 +88,14 @@
 
   
   <?php
-    $slides=[
-      "uno"=>"",
-      "dos"=>"",
-      "tres"=>"",
-    ];
+    $slides=["","","","",];
+    $text=["","","","",];
+    $cont=0;
     if ($resultado = mysqli_query($link, "SELECT * FROM slides ")) {
     while($rows=mysqli_fetch_array($resultado)){
-        $slide1[]=$rows[1];
+        $slides[$cont]=$rows[1];
+        $text[$cont]=$rows[2];
+        $cont++;
     }
     mysqli_free_result($resultado);
     
@@ -113,21 +113,24 @@
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel" data-slide-to="1"></li>
             <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
           </ol>
       
           <!-- Wrapper for slides -->
           <div class="carousel-inner">
             <div class="item active">
-              <img src="<?php echo $slide1 ?>" alt="Los Angeles" style="width:100%;">
-              
+              <img src="<?php echo $slides[0] ?>" alt="Los Angeles" style="width:100%;">
             </div>
       
             <div class="item">
-              <img src="assets/img/testimonials/tec2.jpg" alt="Chicago" style="width:100%;">
+              <img src="<?php echo $slides[1] ?>" alt="Chicago" style="width:100%;">
             </div>
           
             <div class="item">
-              <img src="assets/img/testimonials/tec3.jpg" alt="New york" style="width:100%;">
+              <img src="<?php echo $slides[2] ?>" alt="New york" style="width:100%;">
+            </div>
+            <div class="item">
+              <img src="<?php echo $slides[3] ?>" alt="New york" style="width:100%;">
             </div>
           </div>
       
