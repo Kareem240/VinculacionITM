@@ -29,8 +29,8 @@ $noti=$noticia2->verNoticias();
 					<td><?php echo $row["dir"];?></td>
 					<td><?php echo $row["text"];?></td>
 				<td>
-					<a class="btn btn-primary" href="editar.php?id=<?php echo $row->id; ?>">
-					<i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+					<a class="btn btn-primary" href="editar.php?id=<?php echo $row["id"]; ?>">
+					<i>EDITAR</i></a>
 	        	</td>
 				</tr>
 			<?php } ?>
