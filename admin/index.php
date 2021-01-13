@@ -117,7 +117,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Ingresar">
             </div>
-            <p>¿No tienes una cuenta? <a href="register.php">Regístrate ahora</a>.</p>
+            <p>¿No tienes una cuenta? <a href="vistas/register.php">Regístrate ahora</a>.</p>
         </form>
     </div>    
 </body>

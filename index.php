@@ -10,7 +10,10 @@
   <meta content="" name="keywords">
     
     
-    
+  <!-- Conexion -->  
+  <?php include_once 'admin/includes/config.php' ?>
+
+
 <!-- Extras, Extras-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -84,8 +87,21 @@
   </header><!-- End Header -->
 
   
+  <?php
+    $slides=[
+      "uno"=>"",
+      "dos"=>"",
+      "tres"=>"",
+    ];
+    if ($resultado = mysqli_query($link, "SELECT * FROM slides ")) {
+    while($rows=mysqli_fetch_array($resultado)){
+        $slide1[]=$rows[1];
+    }
+    mysqli_free_result($resultado);
+    
+}?>
+  
   <main id="main">
-
     <!-- Inicia la bienvenida-->
     
     <section id="inicio" class="inicio">
@@ -102,7 +118,7 @@
           <!-- Wrapper for slides -->
           <div class="carousel-inner">
             <div class="item active">
-              <img src="assets/img/testimonials/tec1.jpg" alt="Los Angeles" style="width:100%;">
+              <img src="<?php echo $slide1 ?>" alt="Los Angeles" style="width:100%;">
               
             </div>
       

@@ -1,18 +1,17 @@
 <?php 
-include_once "db.php";
-?>
-<?php
+include_once "config.php";
 
-class productos extends db{
+class noti1 extends config{
     
-    public function verProductos(){
-        $query = $this->connect()->prepare('SELECT * FROM productos');
+    public function verNoricias(){
+        $query = $this->connect()->prepare('SELECT * FROM noticias1');
         $query->execute();
         $lista=$query->fetchAll();
         return $lista;
     }
-    public function edProducto($id,$nombre,$descripcion,$precio,$dir){
-        $query = $this->connect()->prepare('UPDATE `tiendap`.`productos` SET `nombre` = :nombre , `descripcion` = :descripcion , `precio` = :costo , `img` = :dir WHERE `id` = :id; ');
+
+    public function edNoticias($id,$nombre,$descripcion,$precio,$dir){
+        $query = $this->connect()->prepare('UPDATE `vinculacion`.`noticias1` SET `dir` = :nombre , `descripcion` = :descripcion , `precio` = :costo , `img` = :dir WHERE `id` = :id; ');
         echo "".$id.$nombre.$descripcion.$precio.$dir;
         $query->execute(['id'=>$id,'nombre'=>$nombre,'descripcion'=>$descripcion,'costo'=>$precio,'dir'=>$dir ]);
     }
