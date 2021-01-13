@@ -10,9 +10,17 @@ class noti2 {
         return $result;
     }
     public function edNoticias($id,$dir,$text){
-        $query = $this->connect()->prepare('UPDATE `noticias2` SET `dir` = :titulo , `text` = :texto WHERE `id` = :id; ');
-        echo "".$id.$dir.$text;
-        $query->execute(['id'=>$id,'dir'=>$titulo,'text'=>$texto]);
+        include "config.php";
+        $sql = "UPDATE noticias2 SET dir = '".$dir."', text = '".$text."' WHERE id =".$id."";
+        $result = mysqli_query($link, $sql);
+        return $result;
+    }
+    
+    public function select_id($id){
+        include "config.php";
+        $sql = "SELECT * FROM noticias2 WHERE id =".$id;
+        $result = mysqli_query($link, $sql);
+        return $result;
     }
 
     public function agregarNoticias($id,$dir,$text){
