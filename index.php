@@ -69,7 +69,7 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <img src="assets/img/anfei.png" alt="" width="100" height="100" />
+      <img src="assets/img/anfei.png" alt="" width="105" height="83" />
       <h1 class="logo mr-auto"><a href="index.html">VINCULACION ITM</a></h1>
       <nav class="nav-menu d-none d-lg-block">
         <ul>
