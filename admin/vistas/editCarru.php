@@ -30,7 +30,6 @@ $carru=$carrus->verNoticias();
 
             <td width="15%" class="text-center">
           <input type="hidden" name="id" id="id" value="<?php echo $row['id']?>">
-          <input type="hidden" name="dir" id="dir" value="<?php echo $row['dir']?>">
           <button class="btn btn-primary" 
               name="btnAccion" 
               value="editar" 

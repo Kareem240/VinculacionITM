@@ -424,135 +424,190 @@
             
         </div>
     
-    <div class="slider owl-carousel">
-        <div class="card">
-            <div class="img"><img src="assets/img/Logos/logo%20isc%202018.png" ></div>
-            <div class="content">
-                <div class="title">Ing Sistemas </div>
-                <div class="sub-title">2019</div>
-                <p></p>
-                <div class="btn"
-                     
-                     >
-                <center><button>DESCARGA</button></center>  
+        <section class="pt-5 pb-5">
+  <div class="container">
+    <div class="row">
+        <div class="col-6">
+            <h3 class="mb-3">Carousel cards title </h3>
+        </div>
+        <div class="col-6 text-right">
+            <a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators2" role="button" data-slide="prev">
+                <i class="fa fa-arrow-left"></i>
+            </a>
+            <a class="btn btn-primary mb-3 " href="#carouselExampleIndicators2" role="button" data-slide="next">
+                <i class="fa fa-arrow-right"></i>
+            </a>
+        </div>
+        <div class="col-12">
+            <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+
+                            <div class="col-md-4 mb-3">
+                                <div class="card">
+                                    <img class="img-fluid" src="assets/img/Logos/logos%20administraci%C3%B3n.png" style="width: 350px; height: 250px;">
+                                    <div class="card-body">
+                                        <center><h4 class="card-title">Licenciatura en Administración</h4></center>
+                                        <p class="card-text"></p>
+                                        <center>
+                                        <div class="Reportes">
+                                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Reportes
+                                        </a>
+
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                            <a class="dropdown-item" href="documentos/reporte1.pdf">Agosto-Diciembre 2020</a>
+                                            <a class="dropdown-item" href="#">Enero-Mayo 2020</a>
+                                            <a class="dropdown-item" href="#">Agosto-Diciembre 2019</a>
+                                            <a class="dropdown-item" href="#">Enero-Mayo 2019</a>
+                                          </div>
+                                        </div>
+                                        </center>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="card">
+                                    <img class="img-fluid" src="assets/img/Logos/logos%20contadur%C3%ADa.png" style="width: 350px; height: 250px;">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Contador Público</h4>
+                                        <p class="card-text">Reportes</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="card">
+                                    <img class="img-fluid" src="assets/img/Logos/Logotipo%20Ingenieria%20Bioquimica%20-%20Sin%20lema%20-%20Usos%20Multiples.png" style="width: 350px; height: 250px;">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Ingeniería Bioquímica</h4>
+                                        <p class="card-text">Reportes</p>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+
+                            <div class="col-md-4 mb-3">
+                                <div class="card">
+                                    <img class="img-fluid" src="assets//img/Logos/logo%20electr%C3%B3nica%20OK.png" style="width: 350px; height: 250px;">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Ingeniería Electrónica</h4>
+                                        <p class="card-text">Reportes</p>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="card">
+                                    <img class="img-fluid" src="assets/img/Logos/logos%20el%C3%A9ctrica.png" style="width: 350px; height: 250px;">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Ingeniería Eléctrica</h4>
+                                        <p class="card-text">Reportes</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="card">
+                                    <img class="img-fluid" src="assets/img/Logos/logos%20industrial.png" style="width: 350px; height: 250px;">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Ingeniería Industrial</h4>
+                                        <p class="card-text">Reportesss</p>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+
+                            <div class="col-md-4 mb-3">
+                                <div class="card">
+                                    <img class="img-fluid" src="assets/img/Logos/Logo%20Mecatronica.png" style="width: 350px; height: 250px;">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Ingeniaría Mecatrónica</h4>
+                                        <p class="card-text">Reportes</p>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="card">
+                                    <img class="img-fluid" src="assets/img/Logos/logo%20mec%C3%A1nica.png" style="width: 350px; height: 250px;">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Ingeniería Mecánica</h4>
+                                        <p class="card-text">Reportes</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="card">
+                                    <img class="img-fluid" src="assets/img/Logos/logos%20IGE.png" style="width: 350px; height: 250px;">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Ingeniería en Gestión Empresarial</h4>
+                                        <p class="card-text">Reportes</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                      <div class="carousel-item">
+                        <div class="row">
+
+                            <div class="col-md-4 mb-3">
+                                <div class="card">
+                                    <img class="img-fluid" src="assets/img/Logos/logo%20materiales.png" style="width: 350px; height: 250px;">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Ingeniaría en Materiales</h4>
+                                        <p class="card-text">Reportes</p>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="card">
+                                    <img class="img-fluid" src="assets/img/Logos/logo%20isc%202018.png" style="width: 350px; height: 250px;">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Ingeniería en Sistemas Computacionales</h5>
+                                        <p class="card-text">Reportes</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="card">
+                                    <img class="img-fluid" src="assets/img/Logos/ITIC%20-%20Logo.png" style="width: 350px; height: 250px;">
+                                    <div class="card-body">
+                                        <h4 class="card-title">ITICS</h4>
+                                        <p class="card-text">Reportes</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                
             </div>
         </div>
-        
-        <div class="card">
-            <div class="img"><img src="assets/img/Logos/logo%20electr%C3%B3nica%20OK.png" style="width: 230px; height: 215px;"></div>
-            <div class="content">
-                <div class="title">Ing Electronica </div>
-                <div class="sub-title">2019</div>
-                <p></p>
-                <div class="btn">
-                <center><button>DESCARGA</button></center> 
-                </div>
-                
-            </div>
-        </div>
-        
-        <div class="card">
-            <div class="img"><img src="assets/img/Logos/logo%20materiales.png" style="width: 220px; height: 220px;" ></div>
-            <div class="content">
-                <div class="title"> Ing Materiales </div>
-                <div class="sub-title">2019</div>
-                <p></p>
-                <div class="btn">
-                <center><button>DESCARGA</button></center> 
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="card">
-            <div class="img"><img src="assets/img/Logos/Logo%20Mecatronica.png" style="width: 220px; height: 220px;"></div>
-            <div class="content">
-                <div class="title"> Mecatronica </div>
-                <div class="sub-title">2019</div>
-                <p></p>
-                <div class="btn" href="">
-                <center><button>DESCARGA</button></center> 
-                </div>
-                
-            </div>
-        </div>
-        
-        <div class="card">
-            <div class="img"><img src="assets/img/Logos/logo%20mec%C3%A1nica.png" alt=""></div>
-            <div class="content">
-                <div class="title"> Ing Mecanica </div>
-                <div class="sub-title">2019</div>
-                <p></p>
-                <div class="btn">
-                <center><button>DESCARGA</button></center> 
-                </div>
-                
-            </div>
-        </div>
-        
-        <div class="card">
-            <div class="img"><img src="assets/img/Logos/logos%20administraci%C3%B3n.png" alt=""></div>
-            <div class="content">
-                <div class="title"> Administracion </div>
-                <div class="sub-title">2019</div>
-                <p></p>
-                <div class="btn">
-                <center><button>DESCARGA</button></center> 
-                </div>
-                
-            </div>
-        </div>
-        
-        <div class="card">
-            <div class="img"><img src="assets/img/Logos/logos%20contadur%C3%ADa.png" alt=""></div>
-            <div class="content">
-                <div class="title"> Contaduria </div>
-                <div class="sub-title">2019</div>
-                <p></p>
-                <div class="btn">
-                <center><button>DESCARGA</button></center> 
-                </div>
-                
-            </div>
-        </div>
-        
-        <div class="card">
-            <div class="img"><img src="assets/img/Logos/logos%20el%C3%A9ctrica.png" alt=""></div>
-            <div class="content">
-                <div class="title"> Ing Electrica </div>
-                <div class="sub-title">2019</div>
-                <p></p>
-                <div class="btn">
-                <center><button>DESCARGA</button></center> 
-                </div>
-                
-            </div>
-        </div>
-        
-        <div class="card">
-            <div class="img"><img src="assets/img/Logos/logos%20IGE.png" alt=""></div>
-            <div class="content">
-                <div class="title"> I G E </div>
-                <div class="sub-title">2019</div>
-                <p></p>
-                <div class="btn">
-                <center><button>DESCARGA</button></center> 
-                </div>
-                
-            </div>
-        </div>
-        
-      </div>
-            
-      <script>
-          $(".slider").owlCarousel({
-          loop: true,
-          autoplay: true,
-          });
-      </script>
+    </div>
+</div>
+</section> 
+       
+     
 
       
     <!-- Final reportes egresados-->
