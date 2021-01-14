@@ -10,8 +10,12 @@
             $text=$_POST['text'];
             $id=$_POST['id'];
             $carru->edSlide($id,$ruta,$text);
+<<<<<<< HEAD
             echo "Ya se guardo";
             header("location: http://localhost/vinculacionitm/admin ");
+=======
+            header("location: http://localhost/vinculacionitm/admin");
+>>>>>>> 42ae6ce42b031d9184553db87009d23f34f1cf88
         break;
         case 'editar':
         $id=$_POST['id'];
