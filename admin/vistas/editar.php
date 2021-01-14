@@ -10,9 +10,9 @@ $noti=$noticia2->select_id($id);
 $row = $noti->fetch_assoc()
 ?>
 <form action="" method="post">
-	<input type="text" value="<?php echo $row["id"];?>" name="id">
+	<input type="text" value="<?php echo $row["id"];?>" name="id" readonly>
 	<input type="text" value="<?php echo $row["dir"];?>" name="titulo">
-	<input type="text" value="<?php echo $row["text"];?>" name="texto">
+	<textarea rows = "10" cols = "100" name = "texto"><?php echo $row["text"];?></textarea>
 	<input type="submit" name="submit">
 </form>
 

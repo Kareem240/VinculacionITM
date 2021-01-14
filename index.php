@@ -98,7 +98,18 @@
         $cont++;
     }
     mysqli_free_result($resultado);
-    
+    }
+    $titulo=["","","","","",""];
+    $texto=["","","","","",""];
+    $conta=0;
+    if ($res = mysqli_query($link, "SELECT * FROM noticias2 ")) {
+    while($row=mysqli_fetch_array($res)){
+        $titulo[$conta]=$row[1];
+        $texto[$conta]=$row[2];
+        $conta++;
+    }
+    mysqli_free_result($res);
+
 }?>
   
   <main id="main">
@@ -158,7 +169,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-world"></i></div>
-              <h4 id="tNoticia"><a data-toggle="modal" data-target="#exampleModalCenter">Pony New</a></h4>
+              <h4 id="tNoticia"><a data-toggle="modal" data-target="#exampleModalCenter"><?php echo $titulo[0] ?></a></h4>
               <p>Alumnos de Sistemas Computacionales, entre los mejores del pais</p>
               <p id="lMas" data-toggle="modal" data-target="#exampleModalCenter">LEER MAS</p>
             </div>
@@ -167,7 +178,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-world"></i></div>
-              <h4 id="tNoticia"><a data-toggle="modal" data-target="#exampleModalCenter2">Suspension de clases</a></h4>
+              <h4 id="tNoticia"><a data-toggle="modal" data-target="#exampleModalCenter2"><?php echo $titulo[1] ?></a></h4>
               <p>Se ha tomado la medida drastica de suspender todas las clases ya sean en su modalidad presencial tanto como en su modalidad en linea....</p>
               <p id="lMas" data-toggle="modal" data-target="#exampleModalCenter2">LEER MAS</p>
             </div>
@@ -176,33 +187,33 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-world"></i></div>
-              <h4 id="tNoticia"><a data-toggle="modal" data-target="#exampleModalCenter2">PonyFest la estafa del siglo</a></h4>
+              <h4 id="tNoticia"><a data-toggle="modal" data-target="#exampleModalCenter3"><?php echo $titulo[2] ?></a></h4>
               <p>Varios alumnos del Instituto Tecnologico de Morelia han declarado que a dia de hoy no han obtenido un reembolso.....</p>
-              <p id="lMas" data-toggle="modal" data-target="#exampleModalCenter2">LEER MAS</p>
+              <p id="lMas" data-toggle="modal" data-target="#exampleModalCenter3">LEER MAS</p>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-world"></i></div>
-              <h4 id="tNoticia"><a data-toggle="modal" data-target="#exampleModalCenter2">Noticia generica</a></h4>
-              <p id="lMas" data-toggle="modal" data-target="#exampleModalCenter2">LEER MAS</p>
+              <h4 id="tNoticia"><a data-toggle="modal" data-target="#exampleModalCenter4"><?php echo $titulo[3] ?></a></h4>
+              <p id="lMas" data-toggle="modal" data-target="#exampleModalCenter4">LEER MAS</p>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-world"></i></div>
-              <h4 id="tNoticia"><a data-toggle="modal" data-target="#exampleModalCenter2">Noticia generica</a></h4>
-              <p id="lMas" data-toggle="modal" data-target="#exampleModalCenter2">LEER MAS</p>
+              <h4 id="tNoticia"><a data-toggle="modal" data-target="#exampleModalCenter5"><?php echo $titulo[4] ?></a></h4>
+              <p id="lMas" data-toggle="modal" data-target="#exampleModalCenter5">LEER MAS</p>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-world"></i></div>
-              <h4 id="tNoticia"><a data-toggle="modal" data-target="#exampleModalCenter2">Noticia generica</a></h4>
-              <p id="lMas" data-toggle="modal" data-target="#exampleModalCenter2">LEER MAS</p>
+              <h4 id="tNoticia"><a data-toggle="modal" data-target="#exampleModalCenter6"><?php echo $titulo[5] ?></a></h4>
+              <p id="lMas" data-toggle="modal" data-target="#exampleModalCenter6">LEER MAS</p>
             </div>
           </div>
 
@@ -222,44 +233,7 @@
           </button>
         </div>
         <div class="modal-body">
-          <p>
-
-Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-
-Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
-
-Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
-
-Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-
-Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
-
-Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
-
-Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-
-Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
-
-Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
-
-Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-
-Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
-
-Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
-
-Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-
-Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
-
-Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
-
-Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-
-Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
-
-Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
-</p>
+          <p><?php echo $texto[0] ?></p>
         </div>
       </div>
     </div>
@@ -275,11 +249,72 @@ Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, ve
 	        </button>
 	      </div>
 	      <div class="modal-body">
-	      	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	      	<p><?php echo $texto[1] ?></p>
 	      </div>
 	    </div>
 	  </div>
 	</div>
+
+  <div class="modal fade" id="exampleModalCenter3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p><?php echo $texto[2] ?></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModalCenter4" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p><?php echo $texto[3] ?></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModalCenter5" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p><?php echo $texto[4] ?></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModalCenter6" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p><?php echo $texto[5] ?></p>
+        </div>
+      </div>
+    </div>
+  </div>
     <!-- ======= Fin noticias ======= -->
     
 
