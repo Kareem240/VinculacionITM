@@ -18,6 +18,7 @@ $noti=$noticia2->verNoticias();
 			<tr>
 				<th width="15%">ID</th>
 				<th width="15%">Titulo</th>
+				<th width="15%">Descripcion</th>
 				<th width="45%">Texto</th>
 				<th width="15%">Opcion</th>
 			</tr>
@@ -26,7 +27,8 @@ $noti=$noticia2->verNoticias();
 			?>
 				<tr>
 					<td><?php echo $row["id"];?></td>
-					<td><?php echo $row["dir"];?></td>
+					<td><?php echo $row["title"];?></td>
+					<td><?php echo $row["descripcion"];?></td>
 					<td><?php echo $row["text"];?></td>
 				<td>
 					<a class="btn btn-primary" href="editar.php?id=<?php echo $row["id"]; ?>">

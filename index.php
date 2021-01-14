@@ -100,12 +100,14 @@
     mysqli_free_result($resultado);
     }
     $titulo=["","","","","",""];
+    $descrip=["","","","","",""];
     $texto=["","","","","",""];
     $conta=0;
     if ($res = mysqli_query($link, "SELECT * FROM noticias3 ")) {
     while($row=mysqli_fetch_array($res)){
         $titulo[$conta]=$row[1];
-        $texto[$conta]=$row[2];
+        $descrip[$conta]=$row[2];
+        $texto[$conta]=$row[3];
         $conta++;
     }
     mysqli_free_result($res);
@@ -170,7 +172,7 @@
             <div class="icon-box">
               <div class="icon"><i class="bx bx-world"></i></div>
               <h4 id="tNoticia"><a data-toggle="modal" data-target="#exampleModalCenter"><?php echo $titulo[0] ?></a></h4>
-              <p>Alumnos de Sistemas Computacionales, entre los mejores del pais</p>
+              <p><?php echo $descrip[0] ?></p>
               <p id="lMas" data-toggle="modal" data-target="#exampleModalCenter">LEER MAS</p>
             </div>
           </div>
@@ -179,7 +181,7 @@
             <div class="icon-box">
               <div class="icon"><i class="bx bx-world"></i></div>
               <h4 id="tNoticia"><a data-toggle="modal" data-target="#exampleModalCenter2"><?php echo $titulo[1] ?></a></h4>
-              <p>Se ha tomado la medida drastica de suspender todas las clases ya sean en su modalidad presencial tanto como en su modalidad en linea....</p>
+              <p><?php echo $descrip[1] ?></p>
               <p id="lMas" data-toggle="modal" data-target="#exampleModalCenter2">LEER MAS</p>
             </div>
           </div>
@@ -188,7 +190,7 @@
             <div class="icon-box">
               <div class="icon"><i class="bx bx-world"></i></div>
               <h4 id="tNoticia"><a data-toggle="modal" data-target="#exampleModalCenter3"><?php echo $titulo[2] ?></a></h4>
-              <p>Varios alumnos del Instituto Tecnologico de Morelia han declarado que a dia de hoy no han obtenido un reembolso.....</p>
+              <p><?php echo $descrip[2] ?></p>
               <p id="lMas" data-toggle="modal" data-target="#exampleModalCenter3">LEER MAS</p>
             </div>
           </div>
@@ -197,6 +199,7 @@
             <div class="icon-box">
               <div class="icon"><i class="bx bx-world"></i></div>
               <h4 id="tNoticia"><a data-toggle="modal" data-target="#exampleModalCenter4"><?php echo $titulo[3] ?></a></h4>
+              <p><?php echo $descrip[3] ?></p>
               <p id="lMas" data-toggle="modal" data-target="#exampleModalCenter4">LEER MAS</p>
             </div>
           </div>
@@ -205,6 +208,7 @@
             <div class="icon-box">
               <div class="icon"><i class="bx bx-world"></i></div>
               <h4 id="tNoticia"><a data-toggle="modal" data-target="#exampleModalCenter5"><?php echo $titulo[4] ?></a></h4>
+              <p><?php echo $descrip[4] ?></p>
               <p id="lMas" data-toggle="modal" data-target="#exampleModalCenter5">LEER MAS</p>
             </div>
           </div>
@@ -213,6 +217,7 @@
             <div class="icon-box">
               <div class="icon"><i class="bx bx-world"></i></div>
               <h4 id="tNoticia"><a data-toggle="modal" data-target="#exampleModalCenter6"><?php echo $titulo[5] ?></a></h4>
+              <p><?php echo $descrip[5] ?></p>
               <p id="lMas" data-toggle="modal" data-target="#exampleModalCenter6">LEER MAS</p>
             </div>
           </div>

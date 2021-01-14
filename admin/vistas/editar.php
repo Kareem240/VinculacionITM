@@ -11,7 +11,8 @@ $row = $noti->fetch_assoc()
 ?>
 <form action="" method="post">
 	<input type="text" value="<?php echo $row["id"];?>" name="id" readonly>
-	<input type="text" value="<?php echo $row["dir"];?>" name="titulo">
+	<input type="text" value="<?php echo $row["title"];?>" name="titulo">
+	<textarea rows = "5" cols = "10" name = "descripcion"><?php echo $row["descripcion"];?></textarea>
 	<textarea rows = "10" cols = "100" name = "texto"><?php echo $row["text"];?></textarea>
 	<input type="submit" name="submit">
 </form>
@@ -19,7 +20,7 @@ $row = $noti->fetch_assoc()
 <?php
 	
 	if(isset($_POST['submit'])){
-		$noticia2->edNoticias($row["id"],$_POST['titulo'],$_POST['texto']);
+		$noticia2->edNoticias($row["id"],$_POST['titulo'],$_POST['descripcion'],$_POST['texto']);
 		header("location:editNot2.php");
 	}
 	
