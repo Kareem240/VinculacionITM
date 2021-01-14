@@ -102,7 +102,7 @@
     $titulo=["","","","","",""];
     $texto=["","","","","",""];
     $conta=0;
-    if ($res = mysqli_query($link, "SELECT * FROM noticias2 ")) {
+    if ($res = mysqli_query($link, "SELECT * FROM noticias3 ")) {
     while($row=mysqli_fetch_array($res)){
         $titulo[$conta]=$row[1];
         $texto[$conta]=$row[2];
