@@ -73,6 +73,14 @@ CREATE TABLE `noticias3` (
 
 /*Data for the table `noticias3` */
 
+INSERT INTO `noticias3` (`id`, `title`, `descripcion`, `text`) VALUES
+(1, 'Noticia Generica 1', 'Aqui va una descripcion del contenido', 'Aqui va el texto'),
+(2, 'Noticia Generica 2', 'Descripcion de la noticia', 'Aqui va el texto de la noticia'),
+(3, 'Noticia generica 3', 'Descripción de la noticia', 'Aqui va el texto de la noticia'),
+(4, 'dfghjkl', 'ghjkl', 'ghj'),
+(5, 'vb', 'bvnm', 'vbnmm'),
+(6, 'fghj', 'hgjlk', 'fhgj');
+
 /*Table structure for table `reportes` */
 
 DROP TABLE IF EXISTS `reportes`;
