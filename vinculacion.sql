@@ -43,19 +43,6 @@ CREATE TABLE `estadisticas` (
 
 /*Data for the table `estadisticas` */
 
-/*Table structure for table `noticias1` */
-
-DROP TABLE IF EXISTS `noticias1`;
-
-CREATE TABLE `noticias1` (
-  `id` int(11) NOT NULL,
-  `dir` varchar(200) NOT NULL,
-  `text` varchar(500) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
-/*Data for the table `noticias1` */
-
 /*Table structure for table `noticias2` */
 
 DROP TABLE IF EXISTS `noticias2`;
@@ -69,6 +56,9 @@ CREATE TABLE `noticias2` (
 
 /*Data for the table `noticias2` */
 
+insert  into `noticias2`(`id`,`dir`,`text`) values 
+(0,'assets/img/carousel/tec1.jpg',NULL);
+
 /*Table structure for table `reportes` */
 
 DROP TABLE IF EXISTS `reportes`;
@@ -81,6 +71,25 @@ CREATE TABLE `reportes` (
 
 /*Data for the table `reportes` */
 
+/*Table structure for table `slides` */
+
+DROP TABLE IF EXISTS `slides`;
+
+CREATE TABLE `slides` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `dir` varchar(200) NOT NULL,
+  `text` varchar(500) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
+
+/*Data for the table `slides` */
+
+insert  into `slides`(`id`,`dir`,`text`) values 
+(1,'assets/img/carousel/tec1.jpg','prueba'),
+(2,'assets/img/carousel/tec2.jpg',NULL),
+(3,'assets/img/carousel/tec3.jpg',NULL),
+(4,'assets/img/carousel/tec4.jpg',NULL);
+
 /*Table structure for table `users` */
 
 DROP TABLE IF EXISTS `users`;
@@ -92,12 +101,14 @@ CREATE TABLE `users` (
   `created_at` datetime DEFAULT current_timestamp(),
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 /*Data for the table `users` */
 
 insert  into `users`(`id`,`username`,`password`,`created_at`) values 
-(1,'admin','$2y$10$COLB/sIaosyMEhaRHC26rOG/0DQ1Expo.4J.VG6pMSFGepJLvXQle','2021-01-11 18:59:03');
+(1,'admin','$2y$10$COLB/sIaosyMEhaRHC26rOG/0DQ1Expo.4J.VG6pMSFGepJLvXQle','2021-01-11 18:59:03'),
+(4,'karim','$2y$10$41/qWBb8ZA4v5QtB6mdPy.DxCnGK/gJxTg19C5nfwFs2S7mmB5lrK','2021-01-13 11:23:08'),
+(5,'karim240','$2y$10$LixNq9YHNtUAuTgTnXxO8.bqXyN3jfcjqDjnbOfoaAOhTeezsw1zG','2021-01-13 11:25:22');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
