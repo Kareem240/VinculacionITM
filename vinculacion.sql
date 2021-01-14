@@ -59,6 +59,20 @@ CREATE TABLE `noticias2` (
 insert  into `noticias2`(`id`,`dir`,`text`) values 
 (0,'assets/img/carousel/tec1.jpg',NULL);
 
+/*Table structure for table `noticias3` */
+
+DROP TABLE IF EXISTS `noticias3`;
+
+CREATE TABLE `noticias3` (
+  `id` int(6) NOT NULL,
+  `title` varchar(200) DEFAULT NULL,
+  `descripcion` varchar(200) DEFAULT NULL,
+  `text` varchar(5000) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+/*Data for the table `noticias3` */
+
 /*Table structure for table `reportes` */
 
 DROP TABLE IF EXISTS `reportes`;
