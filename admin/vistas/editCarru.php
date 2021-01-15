@@ -22,7 +22,6 @@ $carru=$carrus->verNoticias();
 <?php  while($row = $carru->fetch_assoc()){?>
   <tr>
             <form action="../includes/carrusel.php" enctype="multipart/form-data" method="post">
-            <td width="15%" class="text-center"><input class="form-control" placeholder="<?php echo  $row['dir'];   ?>" value="<?php echo  $row['dir'];   ?>" name="dir" id="dir" type="text" ></td>
             <td width="15%" class="text-center"> <input class="form-control" placeholder="<?php echo  $row['text'];   ?>" value="<?php echo  $row['text'];   ?>" name="text" id="text" type="text" ></td>
             <td width="15%" class="text-center">
 												<input class="btn btn-primary"  name="imagen" id="imagen" type="file">
