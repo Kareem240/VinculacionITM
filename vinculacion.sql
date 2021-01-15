@@ -21,7 +21,7 @@ USE `vinculacion`;
 DROP TABLE IF EXISTS `destacados`;
 
 CREATE TABLE `destacados` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(50) NOT NULL,
   `carrera` varchar(80) NOT NULL,
   `text` varchar(500) NOT NULL,
@@ -35,13 +35,22 @@ CREATE TABLE `destacados` (
 DROP TABLE IF EXISTS `estadisticas`;
 
 CREATE TABLE `estadisticas` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `estad` varchar(50) NOT NULL,
   `val` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `estadisticas` */
+
+insert  into `estadisticas`(`id`,`estad`,`val`) values 
+(1,'Mexico',55),
+(2,'Estados Unidos',158),
+(3,'Europa',286),
+(4,'Acuerdos con estado',286),
+(5,'Acuerdos con federacion ',865),
+(6,'Acuerdos con empresas ',368),
+(7,'Alumnos vinculados ',283);
 
 /*Table structure for table `noticias2` */
 
@@ -73,13 +82,13 @@ CREATE TABLE `noticias3` (
 
 /*Data for the table `noticias3` */
 
-INSERT INTO `noticias3` (`id`, `title`, `descripcion`, `text`) VALUES
-(1, 'Noticia Generica 1', 'Aqui va una descripcion del contenido', 'Aqui va el texto'),
-(2, 'Noticia Generica 2', 'Descripcion de la noticia', 'Aqui va el texto de la noticia'),
-(3, 'Noticia generica 3', 'Descripción de la noticia', 'Aqui va el texto de la noticia'),
-(4, 'dfghjkl', 'ghjkl', 'ghj'),
-(5, 'vb', 'bvnm', 'vbnmm'),
-(6, 'fghj', 'hgjlk', 'fhgj');
+insert  into `noticias3`(`id`,`title`,`descripcion`,`text`) values 
+(1,'Noticia Generica 1','Aqui va una descripcion del contenido','Aqui va el texto'),
+(2,'Noticia Generica 2','Descripcion de la noticia','Aqui va el texto de la noticia'),
+(3,'Noticia generica 3','Descripción de la noticia','Aqui va el texto de la noticia'),
+(4,'dfghjkl','ghjkl','ghj'),
+(5,'vb','bvnm','vbnmm'),
+(6,'fghj','hgjlk','fhgj');
 
 /*Table structure for table `reportes` */
 
