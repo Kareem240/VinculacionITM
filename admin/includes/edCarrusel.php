@@ -22,14 +22,20 @@ class edCarrusel {
         return $result;
     }
 
-    public function agregarNoticias($id,$dir,$text){
-        $query = $this->connect()->prepare('INSERT INTO `slides` (`id`, `dir`, `text`) VALUES (NULL, :titulo, :texto);');
-        $query->execute(['titulo'=>$titulo,'text'=>$texto]);
+    public function nuevo($dir,$text){
+        include "config.php";
+        $sql = "INSERT INTO slides (id, dir, text) VALUES (NULL,".$dir.",".$text.")";
+        echo "Sql: ".$sql;
+        $result = mysqli_query($link, $sql);
+        return $result;
     }
 
     public function eliminar($id){
-        $query = $this->connect()->prepare('DELETE FROM `slides` WHERE `id` = :id; ');
-        $query->execute(['id'=>$id ]);
+        include "config.php";
+        $sql = "DELETE FROM slides  WHERE id =".$id."";
+        $result = mysqli_query($link, $sql);
+        echo "Ya se borro ".$sql;
+        return $result;
     }
 
 }

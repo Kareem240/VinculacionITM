@@ -53,6 +53,7 @@ $carru=$carrus->verNoticias();
            
     </tbody>
 </table>
+<?php include_once 'agregar.php'; ?>
 </body>
  
 
