@@ -24,8 +24,7 @@ class edCarrusel {
 
     public function nuevo($dir,$text){
         include "config.php";
-        $sql = "INSERT INTO slides (id, dir, text) VALUES (NULL,".$dir.",".$text.")";
-        echo "Sql: ".$sql;
+        $sql = "INSERT INTO slides (id, dir,text) VALUES (NULL, '".$dir."', '".$text."');";
         $result = mysqli_query($link, $sql);
         return $result;
     }
@@ -34,9 +33,6 @@ class edCarrusel {
         include "config.php";
         $sql = "DELETE FROM slides  WHERE id =".$id."";
         $result = mysqli_query($link, $sql);
-        echo "Ya se borro ".$sql;
         return $result;
     }
-
 }
-?>

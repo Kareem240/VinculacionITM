@@ -1,7 +1,6 @@
 <?php 
     include 'edCarrusel.php';
     $carru = new edCarrusel();
-    echo "Por si entrassss".$_POST['btnAccion'];
     if($_POST)
     switch($_POST['btnAccion']){
         case 'Agregar':
@@ -9,7 +8,7 @@
             move_uploaded_file($_FILES['imagen']['tmp_name'],"../../".$dir);
             $text=$_POST['text'];
             $carru->nuevo($dir,$text);
-            /*header("location: http://localhost/vinculacionitm/admin/vistas/editCarru.php ");*/
+            header("location: http://localhost/vinculacionitm/admin/vistas/editCarru.php ");
         break;
         case 'editar':
         $id=$_POST['id'];

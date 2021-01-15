@@ -19,12 +19,15 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     
     
-    <nav class="navbar navbar-expand-lg bg-secondary fixed-top " id="mainNav" >
-            <div class="container"><a class="navbar-brand js-scroll-trigger" >ITMorelia</a>
+
+
+
+    
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg bg-secondary fixed-top " id="mainNav" href="http://localhost/vinculacionitm/admin/" >
+            <div class="container"><a class="navbar-brand" >ITMorelia</a>
                 <button class="navbar-toggler navbar-toggler-right font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu <i class="fas fa-bars"></i></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="http://localhost/vinculacionitm/admin/">Home</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="http://localhost/vinculacionitm/admin/">Cuentas</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="http://localhost/vinculacionitm/admin/vistas/editCarru.php">Noticias principales</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="http://localhost/vinculacionitm/admin/vistas/editNot2.php">Noticias secundarias</a></li>
