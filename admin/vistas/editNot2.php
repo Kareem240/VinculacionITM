@@ -14,6 +14,7 @@ $noti=$noticia2->verNoticias();
  ?>
 
     <body>
+    	<form method="post">
         <table border="1" width="100%">
 			<tr>
 				<th width="15%">ID</th>
@@ -37,5 +38,6 @@ $noti=$noticia2->verNoticias();
 				</tr>
 			<?php } ?>
 		</table>
+		</form>
     </body>
 </html>
