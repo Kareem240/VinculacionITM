@@ -59,7 +59,7 @@ $carru=$scrip->verNoticias();
            
     </tbody>
 </table>
-<?php include_once 'agregar.php'; ?>
+<?php include_once 'agrSlide.php'; ?>
 </body>
  
 

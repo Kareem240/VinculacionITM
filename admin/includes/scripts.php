@@ -42,4 +42,12 @@ class scripts {
         $result = mysqli_query($link, $sql);
         return $result;
     }
+
+    public function edStad($id,$val){
+        include "config.php";
+        $sql = "UPDATE estadisticas SET val = '".$val."' WHERE id =".$id."";
+        echo "Script ".$sql;
+        $result = mysqli_query($link, $sql);
+        return $result;
+    }
 }

@@ -34,6 +34,13 @@
             echo "<h1>Se elimino el Slide</h1>";
             echo "<a href='http://localhost/vinculacionitm/admin/vistas/editCarru.php' class='badge  badge-success'> Regresar </a>";
         break;
+
+        case 'editarStad':
+            $id=$_POST['id'];
+            $val=$_POST['val'];
+            $scrip->edStad($id,$val);
+            header("location: http://localhost/vinculacionitm/admin/vistas/editEstadistica.php ");
+        break;
     }else{
         echo "Estas pendejo";
         header("location: http://localhost/vinculacionitm/admin ");
