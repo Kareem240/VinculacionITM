@@ -188,7 +188,7 @@
               </button>
             </div>
             <div class="modal-body">
-              <p><?php echo $row[3] ?></p>
+              <p style="text-align: justify;"><?php echo $row[3] ?></p>
             </div>
           </div>
         </div>
