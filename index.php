@@ -536,7 +536,7 @@
             <div class="count-box">
               <i class="icofont-simple-smile"></i>
               <span data-toggle="counter-up">232</span>
-              <p>Happy Clients</p>
+              <p>Acuerdos con estado</p>
             </div>
           </div>
 
@@ -544,7 +544,7 @@
             <div class="count-box">
               <i class="icofont-document-folder"></i>
               <span data-toggle="counter-up">521</span>
-              <p>Projects</p>
+              <p>Acuerdos con federacion</p>
             </div>
           </div>
 
@@ -552,7 +552,7 @@
             <div class="count-box">
               <i class="icofont-live-support"></i>
               <span data-toggle="counter-up">1,463</span>
-              <p>Hours Of Support</p>
+              <p>Acuerdos con empresas</p>
             </div>
           </div>
 

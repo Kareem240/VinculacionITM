@@ -1,6 +1,6 @@
 <?php
 
-class edCarrusel {
+class scripts {
     
     public function verNoticias(){
         include "config.php";    
@@ -32,6 +32,13 @@ class edCarrusel {
     public function eliminar($id){
         include "config.php";
         $sql = "DELETE FROM slides  WHERE id =".$id."";
+        $result = mysqli_query($link, $sql);
+        return $result;
+    }
+
+    public function verEstadis(){
+        include "config.php";
+        $sql = "SELECT * FROM estadisticas";
         $result = mysqli_query($link, $sql);
         return $result;
     }

@@ -6,7 +6,7 @@
 						<h1>Agregar Slide</h1>
 					</div>
 					<div class="panel-body">
-						<form role="form" enctype="multipart/form-data" action="../includes/carrusel.php" method="POST">
+						<form role="form" enctype="multipart/form-data" action="../includes/post.php" method="POST">
 							<fieldset>
 								<div class="row">
 									<div class="col-sm-12 col-md-10  col-md-offset-1 ">
