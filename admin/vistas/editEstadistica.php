@@ -7,7 +7,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 include_once '../includes/scripts.php';
 $scrip = new scripts();
-$carru=$scrip->verNoticias();
+$info=$scrip->verEstadis();
  include_once 'head.php'; 
  ?>
 
@@ -19,7 +19,7 @@ $carru=$scrip->verNoticias();
             <th width="10%" class="text-center">Descripcion</th>
         </tr>
 
-<?php  while($row = $carru->fetch_assoc()){?>
+<?php  while($row = $info->fetch_assoc()){?>
   <tr>
         <form action="../includes/post.php" enctype="multipart/form-data" method="post">
             <td width="15%">
@@ -62,4 +62,3 @@ $carru=$scrip->verNoticias();
 <?php include_once 'agregar.php'; ?>
 </body>
  
-
