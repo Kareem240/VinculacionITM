@@ -50,4 +50,12 @@ class scripts {
         $result = mysqli_query($link, $sql);
         return $result;
     }
+
+    //JP
+    public function Desta(){
+        include "config.php";    
+        $sql = "SELECT * FROM destacados";
+        $result = mysqli_query($link, $sql);
+        return $result;
+    }
 }

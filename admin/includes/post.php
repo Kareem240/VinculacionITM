@@ -10,6 +10,15 @@
             $scrip->nuevo($dir,$text);
             header("location: http://localhost/vinculacionitm/admin/vistas/editCarru.php ");
         break;
+        
+        //JP
+        case 'AgregarDesta':
+            $dir='assets/img/destacados/'.$_FILES['imagen']['name'];
+            move_uploaded_file($_FILES['imagen']['tmp_name'],"../../".$dir);
+            $text=$_POST['text'];
+            $scrip->nuevo($dir,$text);
+            header("location: http://localhost/vinculacionitm/admin/vistas/editCarru.php ");
+        break;
 
         case 'editar':
             $dir="";
