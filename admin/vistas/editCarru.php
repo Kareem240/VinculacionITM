@@ -30,8 +30,6 @@ $carru=$scrip->verNoticias();
 				<input class="btn btn-primary"  name="imagen" id="imagen" type="file">
             </td>
 
-            
-
             <td width="10%" class="text-center">
                 <input type="hidden" name="id" id="id" value="<?php echo $row['id']?>">
                 <input type="hidden" name="dir" id="dir" value="<?php echo $row['dir']?>">

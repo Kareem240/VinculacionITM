@@ -28,7 +28,7 @@
 										<div class="form-group">
                                         <button class="btn btn-primary" 
                                             name="btnAccion" 
-                                            value="Agregar" 
+                                            value="AgregarDesta" 
                                             type="submit">Agregar
                                         </button>
 										</div>

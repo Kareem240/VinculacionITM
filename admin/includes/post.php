@@ -17,7 +17,7 @@
             move_uploaded_file($_FILES['imagen']['tmp_name'],"../../".$dir);
             $text=$_POST['text'];
             $scrip->nuevo($dir,$text);
-            header("location: http://localhost/vinculacionitm/admin/vistas/editCarru.php ");
+            header("location: http://localhost/vinculacionitm/admin/vistas/ediDestacados.php ");
         break;
 
         case 'editar':
