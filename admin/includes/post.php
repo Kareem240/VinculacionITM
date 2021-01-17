@@ -10,15 +10,6 @@
             $scrip->nuevo($dir,$text);
             header("location: http://localhost/vinculacionitm/admin/vistas/editCarru.php ");
         break;
-        
-        //JP
-        case 'AgregarDesta':
-            $dir='assets/img/destacados/'.$_FILES['imagen']['name'];
-            move_uploaded_file($_FILES['imagen']['tmp_name'],"../../".$dir);
-            $text=$_POST['text'];
-            $scrip->nuevo($dir,$text);
-            header("location: http://localhost/vinculacionitm/admin/vistas/ediDestacados.php ");
-        break;
 
         case 'editar':
             $dir="";
@@ -50,6 +41,36 @@
             $scrip->edStad($id,$val);
             header("location: http://localhost/vinculacionitm/admin/vistas/editEstadistica.php ");
         break;
+            
+            case 'agregarReporte':
+            $dir='assets/img/reportes/'.$_FILES['imagen']['name'];
+            move_uploaded_file($_FILES['imagen']['tmp_name'],"../../".$dir);
+            $carrera=$_POST['carrera'];
+            $descripcion=$_POST['descripcion'];
+            $opc=$_POST['opc'];
+            $scrip->nuevoReporte($carrera,$descripcion,$dir,$opc);
+            header("location: http://localhost/vinculacionitm/admin/vistas/editReporte.php ");
+        break;
+            
+            case 'editarRep':
+            $dir="";
+            $id=$_POST['id'];
+            $descripcion=$_POST['descripcion'];
+            $opc=$_POST['opc'];
+            echo "Llego ".$_FILES['imagen']['name'];
+            if(empty($_FILES['imagen']['name'])){
+                $dir=$_POST['dir'];
+                echo "Se va a guardar la misma direccion ".$dir;
+            }else{
+                $dir='assets/img/reportes/'.$_FILES['imagen']['name'];
+                move_uploaded_file($_FILES['imagen']['tmp_name'],"../../".$dir);
+                echo "Nueva  direccion ".$dir;
+            }
+            $scrip->editarRep($id,$dir,$descripcion);
+            header("location: http://localhost/vinculacionitm/admin/vistas/editReporte.php ");
+        break;
+            
+            
     }else{
         echo "Estas pendejo";
         header("location: http://localhost/vinculacionitm/admin ");

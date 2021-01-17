@@ -50,11 +50,24 @@ class scripts {
         $result = mysqli_query($link, $sql);
         return $result;
     }
-
-    //JP
-    public function Desta(){
-        include "config.php";    
-        $sql = "SELECT * FROM destacados";
+    
+    public function verReporte(){
+        include "config.php";
+        $sql = "SELECT * FROM reportes";
+        $result = mysqli_query($link, $sql);
+        return $result;
+    }
+    // modificar esta en descripcion
+    public function editarRep($id,$dir,$descripcion){
+        include "config.php";
+        $sql = "UPDATE reportes SET dir = '".$dir."', descripcion = '".$descripcion."' WHERE id =".$id."";
+        $result = mysqli_query($link, $sql);
+        return $result;
+    }
+    
+     public function nuevoReporte($carrera,$descripcion,$dir,$opc){
+        include "config.php";
+        $sql = "INSERT INTO reportes (id, carrera, descripcion, dir, opc) VALUES (NULL, NULL ,'".$descripcion."','".$dir."' ,NULL);";
         $result = mysqli_query($link, $sql);
         return $result;
     }
