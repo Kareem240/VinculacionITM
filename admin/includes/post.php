@@ -52,7 +52,7 @@
             header("location: http://localhost/vinculacionitm/admin/vistas/editReporte.php ");
         break;
             
-            case 'editarRep':
+        case 'editarRep':
             $dir="";
             $id=$_POST['id'];
             $descripcion=$_POST['descripcion'];
@@ -69,7 +69,18 @@
             $scrip->editarRep($id,$dir,$descripcion);
             header("location: http://localhost/vinculacionitm/admin/vistas/editReporte.php ");
         break;
+
+        case 'AgregarDesta':
+            echo "si entro";
+            $dir='assets/img/destacados/'.$_FILES['imagen']['name'];
+            move_uploaded_file($_FILES['imagen']['tmp_name'],"../../".$dir);
+            $carrera=$_POST['carrera'];
+            $nombre=$_POST['nombre'];
+            $descripcion=$_POST['text'];
+            $scrip->AgregarDesta($nombre,$carrera,$descripcion,$dir);
             
+            header("location: http://localhost/vinculacionitm/admin/vistas/editReporte.php ");
+        break;
             
     }else{
         echo "Estas pendejo";

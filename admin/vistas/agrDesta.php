@@ -3,7 +3,7 @@
 			<div class="col-11" >
 				<div class="panel panel-default"  >
 					<div class="panel-heading">
-						<h1>Agregar Slide</h1>
+						<h1>Agregar destacado</h1>
 					</div>
 					<div class="panel-body">
 						<form role="form" enctype="multipart/form-data" action="../includes/post.php" method="POST">
@@ -14,7 +14,13 @@
 										<div class="form-group">
                                         <strong> Descripción </strong>
 											<div class="input-group">
-												<input class="form-control" placeholder="Ingresa el nombre que se va a mostrar" name="text" id="text" type="text" >
+												<input class="form-control" placeholder="Nombre" name="nombre" id="nombre" type="text" >
+											</div>
+											<div class="input-group">
+												<input class="form-control" placeholder="Carrera" name="carrera" id="carrera" type="text" >
+											</div>
+											<div class="input-group">
+												<input class="form-control" placeholder="Descripcion" name="text" id="text" type="text" >
 											</div>
                                         </div>
 

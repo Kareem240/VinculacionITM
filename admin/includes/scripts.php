@@ -43,6 +43,20 @@ class scripts {
         return $result;
     }
 
+    public function Desta(){
+        include "config.php";
+        $sql = "SELECT * FROM destacados";
+        $result = mysqli_query($link, $sql);
+        return $result;
+    }
+
+    public function AgregarDesta($nombre, $carrera, $desc, $dir){
+        include "config.php";
+        $sql = "INSERT INTO destacados (id, nombre, carrera, text, dir ) VALUES (NULL, '".$nombre."', '".$carrera."', '".$desc."', '".$dir."');";
+        $result = mysqli_query($link, $sql);
+        return $result;
+    }
+
     public function edStad($id,$val){
         include "config.php";
         $sql = "UPDATE estadisticas SET val = '".$val."' WHERE id =".$id."";
