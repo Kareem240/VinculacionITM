@@ -95,12 +95,69 @@ insert  into `noticias3`(`id`,`title`,`descripcion`,`text`) values
 DROP TABLE IF EXISTS `reportes`;
 
 CREATE TABLE `reportes` (
-  `id` varchar(20) NOT NULL,
-  `dir` varchar(100) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `carrera` varchar(60) DEFAULT NULL,
+  `descripcion` varchar(50) DEFAULT NULL,
+  `dir` varchar(100) DEFAULT NULL,
+  `opc` varchar(30) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=66 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `reportes` */
+
+insert  into `reportes`(`id`,`carrera`,`descripcion`,`dir`,`opc`) values 
+(14,'administracion','Administracion 2021','assets/img/reportes/admin1.pdf',NULL),
+(15,'administracion','Administracion 2020','assets/img/reportes/admin2.pdf',NULL),
+(16,'administracion','Administracion 2019','assets/img/reportes/admin3.pdf',NULL),
+(17,'administracion','Administracion 2018','assets/img/reportes/admin4.pdf',NULL),
+(18,'conta','Conta 2020','assets/img/reportes/EJEMPLO.pdf',NULL),
+(19,'conta','conta 2019','assets/img/reportes/EJEMPLO.pdf',NULL),
+(20,'conta','conta 2018','assets/img/reportes/EJEMPLO.pdf',NULL),
+(21,'conta','Conta 2017','assets/img/reportes/EJEMPLO.pdf',NULL),
+(22,'bioquimica','bioquimica 2020','assets/img/reportes/bio1.pdf',NULL),
+(23,'bioquimica','bio 2019','assets/img/reportes/bio2.pdf',NULL),
+(24,'bioquimica','bio 2018','assets/img/reportes/bio3.pdf',NULL),
+(25,'bioquimica','bio 2017','assets/img/reportes/bio4.pdf',NULL),
+(26,'electronica','electronica 2020','assets/img/reportes/elec1.pdf',NULL),
+(27,'electronica','electronica 2019','assets/img/reportes/elec2.pdf',NULL),
+(28,'electronica','electronica 2018','assets/img/reportes/elec3.pdf',NULL),
+(29,'electronica','electronica 2017','assets/img/reportes/elec4.pdf',NULL),
+(30,'electrica','electrica 2020','assets/img/reportes/elec1.pdf',NULL),
+(31,'electrica','electrica 2019','assets/img/reportes/electrica2.pdf',NULL),
+(32,'electrica','electrica 2018','assets/img/reportes/electrica3.pdf',NULL),
+(33,'electrica','electrica 2017','assets/img/reportes/electrica4.pdf',NULL),
+(34,'industrial','industrial 2021','assets/img/reportes/industrial1.pdf',NULL),
+(35,'industrial','industrial 2020','assets/img/reportes/industrial2.pdf',NULL),
+(36,'industrial','industrial 2019','assets/img/reportes/industrial3.pdf',NULL),
+(37,'industrial','industrial 2018','assets/img/reportes/industrial4.pdf',NULL),
+(38,'mecatronica','mecatronica 2020','assets/img/reportes/mecatronica 1.pdf',NULL),
+(39,'mecatronica','mecatronica 2019','assets/img/reportes/mecatronica 2.pdf',NULL),
+(40,'mecatronica','mecatronica 2018','assets/img/reportes/mecatronica 3.pdf',NULL),
+(41,'mecatronica','mecatronica 2017','assets/img/reportes/mecatronica 4.pdf',NULL),
+(42,'mecanica','mecanica 2020','assets/img/reportes/mecanica.pdf',NULL),
+(43,'mecanica','mecanica 2019','assets/img/reportes/mecanica.pdf',NULL),
+(44,'mecanica','mecanica 2018','assets/img/reportes/mecanica.pdf',NULL),
+(45,'mecanica','mecanica 2017','assets/img/reportes/mecanica.pdf',NULL),
+(46,'IGE','IGE 2020','assets/img/reportes/IGE.pdf',NULL),
+(47,'IGE','IGE 2019','assets/img/reportes/IGE.pdf',NULL),
+(48,'IGE','IGE 2018','assets/img/reportes/IGE.pdf',NULL),
+(49,'IGE','IGE 2017','assets/img/reportes/IGE.pdf',NULL),
+(50,'materiales','materiales 2020','assets/img/reportes/materiales.pdf',NULL),
+(51,'materiales','materiales 2019','assets/img/reportes/materiales.pdf',NULL),
+(52,'materiales','materiales 2018','assets/img/reportes/materiales.pdf',NULL),
+(53,'materiales','materiales 2017','assets/img/reportes/materiales.pdf',NULL),
+(54,'sistemas','sistemas 2020','assets/img/reportes/ISC.pdf',NULL),
+(55,'sistemas','sistemas 2019','assets/img/reportes/ISC.pdf',NULL),
+(56,'sistemas','sistemas 2018','assets/img/reportes/ISC.pdf',NULL),
+(57,'sistemas','sistemas 2017','assets/img/reportes/ISC.pdf',NULL),
+(58,'itics','itics 2020','assets/img/reportes/ITICS.pdf',NULL),
+(59,'itics','itics 2019','assets/img/reportes/ITICS.pdf',NULL),
+(60,'itics','itics 2018','assets/img/reportes/ITICS.pdf',NULL),
+(61,'itics','itics 2017','assets/img/reportes/ITICS.pdf',NULL),
+(62,'informatica','informatica 2020','assets/img/reportes/info.pdf',NULL),
+(63,'informatica','informatica 2018','assets/img/reportes/info.pdf',NULL),
+(64,'informatica','informatica 2017','assets/img/reportes/info.pdf',NULL),
+(65,'informatica ','informatica 2016','assets/img/reportes/info.pdf',NULL);
 
 /*Table structure for table `slides` */
 
@@ -111,15 +168,15 @@ CREATE TABLE `slides` (
   `dir` varchar(200) NOT NULL,
   `text` varchar(500) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `slides` */
 
 insert  into `slides`(`id`,`dir`,`text`) values 
-(1,'assets/img/carousel/tec1.jpg','prueba'),
-(2,'assets/img/carousel/tec2.jpg',NULL),
-(3,'assets/img/carousel/tec3.jpg',NULL),
-(4,'assets/img/carousel/tec4.jpg',NULL);
+(5,'assets/img/carousel/tec1.jpg',''),
+(6,'assets/img/carousel/tec2.jpg',''),
+(7,'assets/img/carousel/tec3.jpg',''),
+(8,'assets/img/carousel/tec5.jpg','');
 
 /*Table structure for table `users` */
 
