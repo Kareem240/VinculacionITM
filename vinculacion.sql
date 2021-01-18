@@ -25,6 +25,7 @@ CREATE TABLE `destacados` (
   `nombre` varchar(50) NOT NULL,
   `carrera` varchar(80) NOT NULL,
   `text` varchar(500) NOT NULL,
+  `dirimg` varchar(150) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -88,7 +89,7 @@ insert  into `noticias3`(`id`,`title`,`descripcion`,`text`) values
 (3,'Noticia generica 3','Descripción de la noticia','Aqui va el texto de la noticia'),
 (4,'dfghjkl','ghjkl','ghj'),
 (5,'vb','bvnm','vbnmm'),
-(6,'fghj','hgjlk','fhgj');
+(6,'xdxd','xdxdxd','xdxdxd');
 
 /*Table structure for table `reportes` */
 
@@ -168,7 +169,7 @@ CREATE TABLE `slides` (
   `dir` varchar(200) NOT NULL,
   `text` varchar(500) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `slides` */
 
