@@ -70,17 +70,41 @@
             header("location: http://localhost/vinculacionitm/admin/vistas/editReporte.php ");
         break;
 
+        //DESTACADOS
         case 'AgregarDesta':
             echo "si entro";
             $dir='assets/img/destacados/'.$_FILES['imagen']['name'];
-            move_uploaded_file($_FILES['imagen']['tmp_name'],"../../".$dir);
+            move_uploaded_file($_FILES['imagen']['tmp_name'],"../../".$dirimg);
             $carrera=$_POST['carrera'];
             $nombre=$_POST['nombre'];
             $descripcion=$_POST['text'];
-            $scrip->AgregarDesta($nombre,$carrera,$descripcion,$dir);
-            
-            header("location: http://localhost/vinculacionitm/admin/vistas/editReporte.php ");
+            $dirimg=$_POST['dirimg'];
+            $scrip->AgregarDesta($nombre,$carrera,$descripcion,$dirimg);
+            header("location: http://localhost/vinculacionitm/admin/vistas/ediDestacados.php ");
         break;
+
+        case 'editarDesta':
+            $dir="";
+            $id=$_POST['id'];
+            $text=$_POST['text'];
+            echo "Llego ".$_FILES['imagen']['name'];
+            if(empty($_FILES['imagen']['name'])){
+                $dir=$_POST['dir'];
+                echo "Se va a guardar la misma direccion ".$dir;
+            }else{
+                $dir='assets/img/carousel/'.$_FILES['imagen']['name'];
+                move_uploaded_file($_FILES['imagen']['tmp_name'],"../../".$dir);
+                echo "Nueva  direccion ".$dir;
+            }
+            $scrip->edSlide($id,$dir,$text);
+            header("location: http://localhost/vinculacionitm/admin/vistas/editDestacados.php ");
+
+            case 'eliminarDesta':
+                $id=$_POST['id'];
+                $scrip->eliminar($id);
+                echo "<h1>Se elimino el Slide</h1>";
+                echo "<a href='http://localhost/vinculacionitm/admin/vistas/editDestacados.php' class='badge  badge-success'> Regresar </a>";
+            break;
             
     }else{
         echo "Estas pendejo";
