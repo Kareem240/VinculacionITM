@@ -60,4 +60,3 @@ $esta=$scrip->verReporte();
     
     </tbody>
 </table>
-<?php include_once 'agrReporte.php'; ?>
