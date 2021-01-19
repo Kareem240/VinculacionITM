@@ -7,37 +7,49 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: ../index.php");
     exit;
 }
-include_once '../includes/noti2.php';
-$noticia2 = new noti2();
-$noti=$noticia2->verNoticias();
+include_once '../includes/scripts.php';
+$noticia2 = new scripts();
+$noti=$noticia2->verNoticias2();
  include_once 'head.php'; 
  ?>
 
     <body>
-    	<form method="post">
-        <table border="1" width="100%">
-			<tr>
-				<th width="15%">ID</th>
-				<th width="15%">Titulo</th>
-				<th width="15%">Descripcion</th>
-				<th width="45%">Texto</th>
-				<th width="15%">Opcion</th>
-			</tr>
-			<?php 
+    	<?php 
 			while($row = $noti->fetch_assoc()){
 			?>
+    	<form action="../includes/post.php" enctype="multipart/form-data" method="post">
+        <table width="100%" class="table table-light table-bordered-black">
+			<tr>
+				<th width="10%" class="text-center">Titulo</th>
+				<th width="10%" class="text-center">Descripcion</th>
+				<th width="40%" class="text-center">Texto</th>
+				<th width="15%" class="text-center">Opcion</th>
+			</tr>
+			
 				<tr>
-					<td><?php echo $row["id"];?></td>
-					<td><?php echo $row["title"];?></td>
-					<td><?php echo $row["descripcion"];?></td>
-					<td><?php echo $row["text"];?></td>
-				<td>
-					<a class="btn btn-primary" href="editar.php?id=<?php echo $row["id"]; ?>">
-					<i>EDITAR</i></a>
+					<input type="hidden" value="<?php echo $row["id"];?>" name="id" readonly>
+					<td class="text-center"><input class="form-control" type="text" value="<?php echo $row["title"];?>" name="titulo"></td>
+					<td class="text-center"><textarea class="form-control" rows = "5" cols = "10" name = "descripcion" value="<?php echo $row["descripcion"];?>"><?php echo $row["descripcion"];?></textarea></td>
+					<td class="text-center"><textarea class="form-control" rows = "10" cols = "100" name = "texto" value="<?php echo $row["text"];?>"><?php echo $row["text"];?></textarea></td>
+				<td class="text-center">
+
+					<button class="btn btn-primary" 
+                        name="btnAccion" 
+                        value="editarNoti" 
+                        type="submit">Guardar
+                    </button>
+                    <button class="btn btn-warning" 
+                        name="btnAccion" 
+                        value="eliminarNoti" 
+                        type="submit">Eliminar
+                    </button>
+	        	</td>
 	        	</td>
 				</tr>
-			<?php } ?>
+			
 		</table>
 		</form>
+		<?php } ?>
+		<?php include_once 'agregarNoti.php'; ?>
     </body>
 </html>

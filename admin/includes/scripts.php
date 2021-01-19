@@ -85,4 +85,29 @@ class scripts {
         $result = mysqli_query($link, $sql);
         return $result;
     }
+    //Noticias
+    public function verNoticias2(){
+        include "config.php";
+        $sql = "SELECT * FROM noticias3";
+        $result = mysqli_query($link, $sql);
+        return $result;
+    }
+    public function nuevaNoti($title,$descripcion,$text){
+        include "config.php";
+        $sql = "INSERT INTO noticias3 (id,title,descripcion,text) VALUES (NULL,'".$title."', '".$descripcion."', '".$text."');";
+        $result = mysqli_query($link, $sql);
+        return $result;
+    }
+    public function edNoticias($id,$title,$descripcion,$text){
+        include "config.php";
+        $sql = "UPDATE noticias3 SET title = '".$title."', descripcion = '".$descripcion."', text = '".$text."' WHERE id =".$id."";
+        $result = mysqli_query($link, $sql);
+        return $result;
+    }
+    public function eliminarNoticia($id){
+        include "config.php";
+        $sql = "DELETE FROM noticias3  WHERE id =".$id."";
+        $result = mysqli_query($link, $sql);
+        return $result;
+    }
 }

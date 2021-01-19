@@ -105,7 +105,30 @@
                 echo "<h1>Se elimino el Slide</h1>";
                 echo "<a href='http://localhost/vinculacionitm/admin/vistas/editDestacados.php' class='badge  badge-success'> Regresar </a>";
             break;
-            
+            //noticias
+            case 'agregarNoti':
+            $title=$_POST['titulo'];
+            $descripcion=$_POST['descripcion'];
+            $text=$_POST['texto'];
+            $scrip->nuevaNoti($title,$descripcion,$text);
+            header("location: http://localhost/vinculacionitm/admin/vistas/editNot2.php ");
+            break;
+
+            case 'editarNoti':
+                $id=$_POST['id'];
+                $title=$_POST['titulo'];
+                $descripcion=$_POST['descripcion'];
+                $text=$_POST['texto'];
+
+                $scrip->edNoticias($id,$title,$descripcion,$text);
+                header("location: http://localhost/vinculacionitm/admin/vistas/editNot2.php ");
+            break;
+
+            case 'eliminarNoti':
+                $id=$_POST['id'];
+                $scrip->eliminarNoticia($id);
+                header("location: http://localhost/vinculacionitm/admin/vistas/editNot2.php ");
+            break;
     }else{
         echo "Estas pendejo";
         header("location: http://localhost/vinculacionitm/admin ");

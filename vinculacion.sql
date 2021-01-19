@@ -74,7 +74,7 @@ insert  into `noticias2`(`id`,`dir`,`text`) values
 DROP TABLE IF EXISTS `noticias3`;
 
 CREATE TABLE `noticias3` (
-  `id` int(6) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(200) DEFAULT NULL,
   `descripcion` varchar(200) DEFAULT NULL,
   `text` varchar(5000) DEFAULT NULL,
