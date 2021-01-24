@@ -540,14 +540,19 @@
      
 
       
-    <!-- Final reportes egresados-->
-
-    
 
 
-    <!-- ======= Estadisticas  ======= -->
 
-    <?php
+    <section id="estadisticas" class="estadisticas section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          
+          <h3><span>Estadisticas</span></h3>
+          <p>Estas son las principales estadisticas de nuestra area.</p>
+        </div>
+
+        <?php
     if ($resultado = mysqli_query($link, "SELECT * FROM estadisticas ")) {
       $cont=0;
     while($rows=mysqli_fetch_array($resultado)){
@@ -637,28 +642,40 @@
         </div>
 
       </div>
-    </section><!-- End Counts Section -->
+    </section>
+
+      </div>
+    </section>
+    <!-- End Frequently Asked Questions Section -->
 
 
-    
 <!-- preguntas frecuentes -->
     <section id="encuestas" class="encuestas section-bg">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
           
-          <h3><span>COLABORA CON NOSOTROS</span></h3>
+          <h3><span>Encuestas</span></h3>
           <p>Nos encantaría saber desde tu criterio cómo es que ha sido tu experiencia con el uso de esta herramienta que hemos creamos para beneficio tuyo.</p>
         </div>
-
+        <?php
+    if ($resultado = mysqli_query($link, "SELECT * FROM encuestas ")) {
+  
+    while($rows=mysqli_fetch_array($resultado)){
+        $nom=$rows[1];
+        $url=$rows[2];
+    }
+    mysqli_free_result($resultado);
+    }
+    ?>
         <ul class="faq-list" data-aos="fade-up" data-aos-delay="100">
 
           <li>
-            <a data-toggle="collapse" class="" href="#faq1"><strong>¡Califica tu experiencia de uso en el sitio!</strong><i class="icofont-simple-up"></i></a>
+            <a data-toggle="collapse" class="" href="#faq1"><strong><?php echo $nom?></strong><i class="icofont-simple-up"></i></a>
             <div id="faq1" class="collapse show" data-parent=".faq-list">
               <br>
               <p>
-                <a href="https://forms.gle/wKW8wHF66aRCjqXr7" target="_BLANK"><u>Encuesta en Google Forms</u></a>
+                <a href="<?php echo $url?>" target="_BLANK"><u>Encuesta </u></a>
                 
               </p>
             </div>

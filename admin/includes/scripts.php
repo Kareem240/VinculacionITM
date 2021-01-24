@@ -8,6 +8,35 @@ class scripts {
         $result = mysqli_query($link, $sql);
         return $result;
     }
+
+    public function verEncues(){
+        include "config.php";    
+        $sql = "SELECT * FROM encuestas";
+        $result = mysqli_query($link, $sql);
+        return $result;
+    }
+
+    public function edEncues($id,$nombre,$url){
+        include "config.php";
+        $sql = "UPDATE encuestas SET nombre = '".$nombre."', url = '".$url."' WHERE id =".$id."";
+        $result = mysqli_query($link, $sql);
+        return $result;
+    }
+
+    public function elimEncues($id){
+        include "config.php";
+        $sql = "DELETE FROM encuestas  WHERE id =".$id."";
+        $result = mysqli_query($link, $sql);
+        return $result;
+    }
+
+    public function agrEncues($nombre,$url){
+        include "config.php";
+        $sql = "INSERT INTO encuestas (id, nombre,url) VALUES (NULL, '".$nombre."', '".$url."');";
+        $result = mysqli_query($link, $sql);
+        return $result;
+    }
+
     public function edSlide($id,$dir,$text){
         include "config.php";
         $sql = "UPDATE slides SET dir = '".$dir."', text = '".$text."' WHERE id =".$id."";

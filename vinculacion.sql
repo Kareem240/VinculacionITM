@@ -1,6 +1,6 @@
 /*
 SQLyog Community v13.1.7 (64 bit)
-MySQL - 10.4.17-MariaDB : Database - vinculacion
+MySQL - 10.4.17-MariaDB : Database - id15950811_vinculacion
 *********************************************************************
 */
 
@@ -12,9 +12,9 @@ MySQL - 10.4.17-MariaDB : Database - vinculacion
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-CREATE DATABASE /*!32312 IF NOT EXISTS*/`vinculacion` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`id15950811_vinculacion` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
 
-USE `vinculacion`;
+USE `id15950811_vinculacion`;
 
 /*Table structure for table `destacados` */
 
@@ -30,6 +30,22 @@ CREATE TABLE `destacados` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `destacados` */
+
+/*Table structure for table `encuestas` */
+
+DROP TABLE IF EXISTS `encuestas`;
+
+CREATE TABLE `encuestas` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(80) NOT NULL,
+  `url` varchar(200) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
+
+/*Data for the table `encuestas` */
+
+insert  into `encuestas`(`id`,`nombre`,`url`) values 
+(1,'egresados ','https://docs.google.com/forms/d/e/1FAIpQLSe9kBY3L8FFCF-QMqKyRBLvIOVELu_a_GLB2i_UODFlhgFAuQ/viewform');
 
 /*Table structure for table `estadisticas` */
 
@@ -51,7 +67,7 @@ insert  into `estadisticas`(`id`,`estad`,`val`) values
 (4,'Acuerdos con estado',286),
 (5,'Acuerdos con federacion ',865),
 (6,'Acuerdos con empresas ',368),
-(7,'Alumnos vinculados ',283);
+(7,'Alumnos vinculados ',55);
 
 /*Table structure for table `noticias2` */
 
@@ -74,7 +90,7 @@ insert  into `noticias2`(`id`,`dir`,`text`) values
 DROP TABLE IF EXISTS `noticias3`;
 
 CREATE TABLE `noticias3` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(6) NOT NULL,
   `title` varchar(200) DEFAULT NULL,
   `descripcion` varchar(200) DEFAULT NULL,
   `text` varchar(5000) DEFAULT NULL,
@@ -169,7 +185,7 @@ CREATE TABLE `slides` (
   `dir` varchar(200) NOT NULL,
   `text` varchar(500) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `slides` */
 

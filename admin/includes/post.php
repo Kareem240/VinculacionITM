@@ -42,6 +42,28 @@
             header("location: http://localhost/vinculacionitm/admin/vistas/editEstadistica.php ");
         break;
             
+        case 'elimEncues':
+            $id=$_POST['id'];
+            $scrip->elimEncues($id);
+            header("location: http://localhost/vinculacionitm/admin/vistas/editEncues.php ");
+        break;
+
+        
+        case 'editEncues':
+            $id=$_POST['id'];
+            $nombre=$_POST['nombre'];
+            $url=$_POST['url'];
+            $scrip->edEncues($id,$nombre,$url);
+            header("location: http://localhost/vinculacionitm/admin/vistas/editEncues.php ");
+        break;
+
+        case 'agrEncues':
+            $nombre=$_POST['nombre'];
+            $url=$_POST['url'];
+            $scrip->agrEncues($nombre,$url);
+            header("location: http://localhost/vinculacionitm/admin/vistas/editEncues.php ");
+        break;
+
             case 'agregarReporte':
             $dir='assets/img/reportes/'.$_FILES['imagen']['name'];
             move_uploaded_file($_FILES['imagen']['tmp_name'],"../../".$dir);
