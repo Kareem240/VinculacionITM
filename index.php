@@ -301,9 +301,10 @@
     mysqli_free_result($resultado);
     }
     ?>
-
+      <section id="reportes" class="reportes section-bg">
+      <div class="container" data-aos="fade-up">
+      <div class="section-title"> 
       
-      <div class="section-title">
         
           <h2>Reportes</h2>
           <h3>REPORTES DE <span>EGRESADOS</span></h3>
