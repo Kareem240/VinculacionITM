@@ -94,13 +94,11 @@
 
         //DESTACADOS
         case 'AgregarDesta':
-            echo "si entro";
-            $dir='assets/img/destacados/'.$_FILES['imagen']['name'];
+            $dirimg='assets/img/destacados/'.$_FILES['imagen']['name'];
             move_uploaded_file($_FILES['imagen']['tmp_name'],"../../".$dirimg);
             $carrera=$_POST['carrera'];
             $nombre=$_POST['nombre'];
             $descripcion=$_POST['text'];
-            $dirimg=$_POST['dirimg'];
             $scrip->AgregarDesta($nombre,$carrera,$descripcion,$dirimg);
             header("location: http://localhost/vinculacionitm/admin/vistas/ediDestacados.php ");
         break;
@@ -108,6 +106,8 @@
         case 'editarDesta':
             $dir="";
             $id=$_POST['id'];
+            $nombre=$_POST['nombre'];
+            $carrera=$_POST['carrera'];
             $text=$_POST['text'];
             echo "Llego ".$_FILES['imagen']['name'];
             if(empty($_FILES['imagen']['name'])){
@@ -118,14 +118,14 @@
                 move_uploaded_file($_FILES['imagen']['tmp_name'],"../../".$dir);
                 echo "Nueva  direccion ".$dir;
             }
-            $scrip->edSlide($id,$dir,$text);
-            header("location: http://localhost/vinculacionitm/admin/vistas/editDestacados.php ");
+            $scrip->edDest($id, $nombre,$carrera, $text, $dir);
+            header("location: http://localhost/vinculacionitm/admin/vistas/ediDestacados.php ");
+            break;
 
             case 'eliminarDesta':
                 $id=$_POST['id'];
-                $scrip->eliminar($id);
-                echo "<h1>Se elimino el Slide</h1>";
-                echo "<a href='http://localhost/vinculacionitm/admin/vistas/editDestacados.php' class='badge  badge-success'> Regresar </a>";
+                $scrip->eliminarDesta($id);
+                header("location: http://localhost/vinculacionitm/admin/vistas/ediDestacados.php");
             break;
             //noticias
             case 'agregarNoti':

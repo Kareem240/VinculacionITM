@@ -81,7 +81,22 @@ class scripts {
 
     public function AgregarDesta($nombre, $carrera, $desc, $dir){
         include "config.php";
-        $sql = "INSERT INTO destacados (id, nombre, carrera, text, dir ) VALUES (NULL, '".$nombre."', '".$carrera."', '".$desc."', '".$dir."');";
+        $sql = "INSERT INTO destacados (nombre, carrera, text, dirimg) VALUES ('".$nombre."', '".$carrera."', '".$desc."', '".$dir."');";
+        echo "Llego :". $sql;
+        $result = mysqli_query($link, $sql);
+        return $result;
+    }
+
+    public function edDest($id,$nombre, $carrera, $desc, $dir){
+        include "config.php";
+        $sql = "UPDATE destacados SET nombre = '".$nombre."', carrera = '".$carrera."', text = '".$desc."', dirimg = '".$dir."' WHERE id =".$id."";
+        $result = mysqli_query($link, $sql);
+        return $result;
+    }
+
+    public function eliminarDesta($id){
+        include "config.php";
+        $sql = "DELETE FROM destacados  WHERE id =".$id."";
         $result = mysqli_query($link, $sql);
         return $result;
     }
