@@ -1,4 +1,4 @@
-<!-- preguntas frecuentes -->
+<!-- Seccion de egresados -->
 <section id="encuestas" class="encuestas section-bg">
       <div class="container" data-aos="fade-up">
 
@@ -8,36 +8,31 @@
           <p>¿Eres egresado del ITM? Puedes participar en nuestra encuesta para mejorar la informacion de esta pagina, ademas si quieres conocer ofertas de empleo aqui lo puedes consultar.</p>
           
         </div>
+        
+        
         <?php
+    $nom=[];
+    $url=[];
+    $cont=0;
     if ($resultado = mysqli_query($link, "SELECT * FROM encuestas ")) {
-  
     while($rows=mysqli_fetch_array($resultado)){
-        $nom=$rows[1];
-        $url=$rows[2];
+        $nom[$cont]=$rows[1];
+        $url[$cont]=$rows[2];
+        $cont++;
     }
     mysqli_free_result($resultado);
     }
     ?>
-        <ul class="faq-list" data-aos="fade-up" data-aos-delay="100">
-
+        <ul class="faq-list" data-aos="fade-down" data-aos-delay="100">
           <li>
-            <a data-toggle="collapse" class="" href="#faq1"><strong><?php echo $nom?></strong><i class="icofont-simple-up"></i></a>
-            <div id="faq1" class="collapse show" data-parent=".faq-list">
-              <br>
-              <p>
-                <a href="<?php echo $url?>" target="_BLANK"><u>Encuesta </u></a>
-                
-              </p>
-            </div>
-          </li>
-
-          <li>
-            <a data-toggle="collapse" href="#faq2" class="collapsed"><strong>¿Qué te gustaría que nuestro sitio tuviera?</strong><i class="icofont-simple-up"></i></a>
+            <a data-toggle="collapse" href="#faq2" class="collapsed"><strong>Encuestas</strong><i class="icofont-simple-up"></i></a>
             <div id="faq2" class="collapse" data-parent=".faq-list">
               <br>
-              <p>
-                <a href="https://forms.gle/wKW8wHF66aRCjqXr7" target="_BLANK"><u>Encuesta en Google Forms</u></a>
+              <?php for($i=0;$i<$cont;$i++){?>
+                <p>
+                <a href="<?php echo $url[$i] ?>" target="_BLANK"><u><?php echo $nom[$i]?></u></a>
               </p>
+                <?php }?>
             </div>
           </li>
 
@@ -45,4 +40,4 @@
 
       </div>
     </section>
-    <!-- End Frequently Asked Questions Section -->
+    <!--Seccion de egresados -->
