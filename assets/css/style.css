@@ -1193,6 +1193,14 @@ section {
   position: relative;
 }
 
+.carousel-inner img {
+  width: 100%;
+  max-height: 650px;
+}
+
+.carousel-inner{
+  max-height: 650px;
+}
 
 
 

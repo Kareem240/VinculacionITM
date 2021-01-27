@@ -75,7 +75,7 @@
           <li><a href="#testimonials">Testimonios</a></li>
           <li><a href="#nosotros">Nosotros</a></li>
           <li><a href="#reportes">Reportes</a></li>
-          <li><a href="#encuestas">Colabora</a></li>
+          <li><a href="#encuestas">Egresados</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>
       </nav><!-- .nav-menu -->

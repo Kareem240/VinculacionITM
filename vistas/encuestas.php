@@ -4,8 +4,9 @@
 
         <div class="section-title">
           
-          <h3><span>Encuestas</span></h3>
-          <p>Nos encantaría saber desde tu criterio cómo es que ha sido tu experiencia con el uso de esta herramienta que hemos creamos para beneficio tuyo.</p>
+          <h3><span>Egresados</span></h3>
+          <p>¿Eres egresado del ITM? Puedes participar en nuestra encuesta para mejorar la informacion de esta pagina, ademas si quieres conocer ofertas de empleo aqui lo puedes consultar.</p>
+          
         </div>
         <?php
     if ($resultado = mysqli_query($link, "SELECT * FROM encuestas ")) {
