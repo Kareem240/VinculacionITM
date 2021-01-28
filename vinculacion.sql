@@ -1,6 +1,6 @@
 /*
 SQLyog Community v13.1.7 (64 bit)
-MySQL - 10.4.17-MariaDB : Database - id15950811_vinculacion
+MySQL - 10.4.17-MariaDB : Database - vinculacion
 *********************************************************************
 */
 
@@ -12,9 +12,29 @@ MySQL - 10.4.17-MariaDB : Database - id15950811_vinculacion
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-CREATE DATABASE /*!32312 IF NOT EXISTS*/`id15950811_vinculacion` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`vinculacion` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
 
-USE `id15950811_vinculacion`;
+USE `vinculacion`;
+
+/*Table structure for table `bolsa` */
+
+DROP TABLE IF EXISTS `bolsa`;
+
+CREATE TABLE `bolsa` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `dir` varchar(50) NOT NULL,
+  `title` varchar(50) NOT NULL,
+  `descripcion` varchar(200) NOT NULL,
+  `text` varchar(200) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
+
+/*Data for the table `bolsa` */
+
+insert  into `bolsa`(`id`,`dir`,`title`,`descripcion`,`text`) values 
+(2,'assets/img/bolsa/1.jpg','IBM','Estadías en IBM','Para mayor información agenda una cita al 4452352432'),
+(4,'assets/img/bolsa/tec3.jpg','GM','Trabajo para ing mecanico','Comunicate para mas informacion '),
+(5,'assets/img/bolsa/team-3.jpg','Gerente Dell','Ing GE','Gerente para sucursal morelia ');
 
 /*Table structure for table `destacados` */
 
@@ -27,9 +47,13 @@ CREATE TABLE `destacados` (
   `text` varchar(500) NOT NULL,
   `dirimg` varchar(150) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `destacados` */
+
+insert  into `destacados`(`id`,`nombre`,`carrera`,`text`,`dirimg`) values 
+(1,'Prueba','Ing sistemas','Prueba 2','assets/img/destacados/testimonials-5.jpg'),
+(3,'Snoop','Ing Quimica','Destacada quimico ','assets/img/destacados/team-3.jpg');
 
 /*Table structure for table `encuestas` */
 
@@ -40,12 +64,13 @@ CREATE TABLE `encuestas` (
   `nombre` varchar(80) NOT NULL,
   `url` varchar(200) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `encuestas` */
 
 insert  into `encuestas`(`id`,`nombre`,`url`) values 
-(1,'egresados ','https://docs.google.com/forms/d/e/1FAIpQLSe9kBY3L8FFCF-QMqKyRBLvIOVELu_a_GLB2i_UODFlhgFAuQ/viewform');
+(1,'Egresados de quimica','https://docs.google.com/forms/d/e/1FAIpQLSe9kBY3L8FFCF-QMqKyRBLvIOVELu_a_GLB2i_UODFlhgFAuQ/viewform'),
+(4,'Egresados de sistemas','https://docs.google.com/forms/d/e/1FAIpQLSe9kBY3L8FFCF-QMqKyRBLvIOVELu_a_GLB2i_UODFlhgFAuQ/viewform');
 
 /*Table structure for table `estadisticas` */
 
@@ -67,7 +92,7 @@ insert  into `estadisticas`(`id`,`estad`,`val`) values
 (4,'Acuerdos con estado',286),
 (5,'Acuerdos con federacion ',865),
 (6,'Acuerdos con empresas ',368),
-(7,'Alumnos vinculados ',55);
+(7,'Alumnos vinculados ',2354);
 
 /*Table structure for table `noticias2` */
 
@@ -123,50 +148,50 @@ CREATE TABLE `reportes` (
 /*Data for the table `reportes` */
 
 insert  into `reportes`(`id`,`carrera`,`descripcion`,`dir`,`opc`) values 
-(14,'administracion','Administracion 2021','assets/img/reportes/admin1.pdf',NULL),
-(15,'administracion','Administracion 2020','assets/img/reportes/admin2.pdf',NULL),
-(16,'administracion','Administracion 2019','assets/img/reportes/admin3.pdf',NULL),
-(17,'administracion','Administracion 2018','assets/img/reportes/admin4.pdf',NULL),
-(18,'conta','Conta 2020','assets/img/reportes/EJEMPLO.pdf',NULL),
-(19,'conta','conta 2019','assets/img/reportes/EJEMPLO.pdf',NULL),
-(20,'conta','conta 2018','assets/img/reportes/EJEMPLO.pdf',NULL),
-(21,'conta','Conta 2017','assets/img/reportes/EJEMPLO.pdf',NULL),
+(14,'Licenciatura en Administracion','Administracion 2021','assets/img/reportes/admin1.pdf',NULL),
+(15,'Licenciatura en Administracion','Administracion 2020','assets/img/reportes/admin2.pdf',NULL),
+(16,'Licenciatura en Administracion','Administracion 2019','assets/img/reportes/admin3.pdf',NULL),
+(17,'Licenciatura en Administracion','Administracion 2018','assets/img/reportes/admin4.pdf',NULL),
+(18,'Contador publico','Conta 2020','assets/img/reportes/EJEMPLO.pdf',NULL),
+(19,'Contador publico','conta 2019','assets/img/reportes/EJEMPLO.pdf',NULL),
+(20,'Contador publico','conta 2018','assets/img/reportes/EJEMPLO.pdf',NULL),
+(21,'Contador publico','Conta 2017','assets/img/reportes/EJEMPLO.pdf',NULL),
 (22,'bioquimica','bioquimica 2020','assets/img/reportes/bio1.pdf',NULL),
 (23,'bioquimica','bio 2019','assets/img/reportes/bio2.pdf',NULL),
 (24,'bioquimica','bio 2018','assets/img/reportes/bio3.pdf',NULL),
 (25,'bioquimica','bio 2017','assets/img/reportes/bio4.pdf',NULL),
-(26,'electronica','electronica 2020','assets/img/reportes/elec1.pdf',NULL),
-(27,'electronica','electronica 2019','assets/img/reportes/elec2.pdf',NULL),
-(28,'electronica','electronica 2018','assets/img/reportes/elec3.pdf',NULL),
-(29,'electronica','electronica 2017','assets/img/reportes/elec4.pdf',NULL),
-(30,'electrica','electrica 2020','assets/img/reportes/elec1.pdf',NULL),
-(31,'electrica','electrica 2019','assets/img/reportes/electrica2.pdf',NULL),
-(32,'electrica','electrica 2018','assets/img/reportes/electrica3.pdf',NULL),
-(33,'electrica','electrica 2017','assets/img/reportes/electrica4.pdf',NULL),
-(34,'industrial','industrial 2021','assets/img/reportes/industrial1.pdf',NULL),
-(35,'industrial','industrial 2020','assets/img/reportes/industrial2.pdf',NULL),
-(36,'industrial','industrial 2019','assets/img/reportes/industrial3.pdf',NULL),
-(37,'industrial','industrial 2018','assets/img/reportes/industrial4.pdf',NULL),
-(38,'mecatronica','mecatronica 2020','assets/img/reportes/mecatronica 1.pdf',NULL),
-(39,'mecatronica','mecatronica 2019','assets/img/reportes/mecatronica 2.pdf',NULL),
-(40,'mecatronica','mecatronica 2018','assets/img/reportes/mecatronica 3.pdf',NULL),
-(41,'mecatronica','mecatronica 2017','assets/img/reportes/mecatronica 4.pdf',NULL),
-(42,'mecanica','mecanica 2020','assets/img/reportes/mecanica.pdf',NULL),
-(43,'mecanica','mecanica 2019','assets/img/reportes/mecanica.pdf',NULL),
-(44,'mecanica','mecanica 2018','assets/img/reportes/mecanica.pdf',NULL),
-(45,'mecanica','mecanica 2017','assets/img/reportes/mecanica.pdf',NULL),
-(46,'IGE','IGE 2020','assets/img/reportes/IGE.pdf',NULL),
-(47,'IGE','IGE 2019','assets/img/reportes/IGE.pdf',NULL),
-(48,'IGE','IGE 2018','assets/img/reportes/IGE.pdf',NULL),
-(49,'IGE','IGE 2017','assets/img/reportes/IGE.pdf',NULL),
-(50,'materiales','materiales 2020','assets/img/reportes/materiales.pdf',NULL),
-(51,'materiales','materiales 2019','assets/img/reportes/materiales.pdf',NULL),
-(52,'materiales','materiales 2018','assets/img/reportes/materiales.pdf',NULL),
-(53,'materiales','materiales 2017','assets/img/reportes/materiales.pdf',NULL),
-(54,'sistemas','sistemas 2020','assets/img/reportes/ISC.pdf',NULL),
-(55,'sistemas','sistemas 2019','assets/img/reportes/ISC.pdf',NULL),
-(56,'sistemas','sistemas 2018','assets/img/reportes/ISC.pdf',NULL),
-(57,'sistemas','sistemas 2017','assets/img/reportes/ISC.pdf',NULL),
+(26,'Ingenieria electronica','electronica 2020','assets/img/reportes/elec1.pdf',NULL),
+(27,'Ingenieria electronica','electronica 2019','assets/img/reportes/elec2.pdf',NULL),
+(28,'Ingenieria electronica','electronica 2018','assets/img/reportes/elec3.pdf',NULL),
+(29,'Ingenieria electronica','electronica 2017','assets/img/reportes/elec4.pdf',NULL),
+(30,'Ingenieria electrica','electrica 2020','assets/img/reportes/elec1.pdf',NULL),
+(31,'Ingenieria electrica','electrica 2019','assets/img/reportes/electrica2.pdf',NULL),
+(32,'Ingenieria electrica','electrica 2018','assets/img/reportes/electrica3.pdf',NULL),
+(33,'Ingenieria electrica','electrica 2017','assets/img/reportes/electrica4.pdf',NULL),
+(34,'Ingenieria industrial','industrial 2021','assets/img/reportes/industrial1.pdf',NULL),
+(35,'Ingenieria industrial','industrial 2020','assets/img/reportes/industrial2.pdf',NULL),
+(36,'Ingenieria industrial','industrial 2019','assets/img/reportes/industrial3.pdf',NULL),
+(37,'Ingenieria industrial','industrial 2018','assets/img/reportes/industrial4.pdf',NULL),
+(38,'Ingenieria mecatronica','mecatronica 2020','assets/img/reportes/mecatronica 1.pdf',NULL),
+(39,'Ingenieria mecatronica','mecatronica 2019','assets/img/reportes/mecatronica 2.pdf',NULL),
+(40,'Ingenieria mecatronica','mecatronica 2018','assets/img/reportes/mecatronica 3.pdf',NULL),
+(41,'Ingenieria mecatronica','mecatronica 2017','assets/img/reportes/mecatronica 4.pdf',NULL),
+(42,'Ingenieria mecanica','mecanica 2020','assets/img/reportes/mecanica.pdf',NULL),
+(43,'Ingenieria mecanica','mecanica 2019','assets/img/reportes/mecanica.pdf',NULL),
+(44,'Ingenieria mecanica','mecanica 2018','assets/img/reportes/mecanica.pdf',NULL),
+(45,'Ingenieria mecanica','mecanica 2017','assets/img/reportes/mecanica.pdf',NULL),
+(46,'Ingenieria en gestion empresarial','IGE 2020','assets/img/reportes/IGE.pdf',NULL),
+(47,'Ingenieria en gestion empresarial','IGE 2019','assets/img/reportes/IGE.pdf',NULL),
+(48,'Ingenieria en gestion empresarial','IGE 2018','assets/img/reportes/IGE.pdf',NULL),
+(49,'Ingenieria en gestion empresarial','IGE 2017','assets/img/reportes/IGE.pdf',NULL),
+(50,'Ingenieria en materiales','materiales 2020','assets/img/reportes/materiales.pdf',NULL),
+(51,'Ingenieria en materiales','materiales 2019','assets/img/reportes/materiales.pdf',NULL),
+(52,'Ingenieria en materiales','materiales 2018','assets/img/reportes/materiales.pdf',NULL),
+(53,'Ingenieria en materiales','materiales 2017','assets/img/reportes/materiales.pdf',NULL),
+(54,'Ingenieria en sistemas computacionales','sistemas 2020','assets/img/reportes/ISC.pdf',NULL),
+(55,'Ingenieria en sistemas computacionales','sistemas 2019','assets/img/reportes/ISC.pdf',NULL),
+(56,'Ingenieria en sistemas computacionales','sistemas 2018','assets/img/reportes/ISC.pdf',NULL),
+(57,'Ingenieria en sistemas computacionales','sistemas 2017','assets/img/reportes/ISC.pdf',NULL),
 (58,'itics','itics 2020','assets/img/reportes/ITICS.pdf',NULL),
 (59,'itics','itics 2019','assets/img/reportes/ITICS.pdf',NULL),
 (60,'itics','itics 2018','assets/img/reportes/ITICS.pdf',NULL),
@@ -185,15 +210,15 @@ CREATE TABLE `slides` (
   `dir` varchar(200) NOT NULL,
   `text` varchar(500) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `slides` */
 
 insert  into `slides`(`id`,`dir`,`text`) values 
-(5,'assets/img/carousel/tec1.jpg',''),
-(6,'assets/img/carousel/tec2.jpg',''),
-(7,'assets/img/carousel/tec3.jpg',''),
-(8,'assets/img/carousel/tec5.jpg','');
+(5,'assets/img/carousel/tec1.jpg','prueba 1'),
+(6,'assets/img/carousel/tec2.jpg','prueba 2'),
+(14,'assets/img/carousel/tec2.jpg','Vamos a probardfasfdsa'),
+(17,'assets/img/carousel/1.jpg','Estudiante destacado trabajando en Europa');
 
 /*Table structure for table `users` */
 

@@ -220,6 +220,13 @@ function editado(){
             echo ".";
             ?><script>agregado();</script><?php
             break;
+            
+            case 'eliminarBol':
+                $id=$_POST['id'];
+                $scrip->eliminarBolsa($id);
+                echo ".";
+                ?><script>eliminado();</script><?php
+            break;
     }else{
         header("location: http://localhost/vinculacionitm/admin ");
     }

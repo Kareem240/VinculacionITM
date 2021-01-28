@@ -110,9 +110,9 @@
                 <div class="icon"><i class="bx bx-world"></i></div>
                 <!-- se llama a la imagen agregando el ../ para que se pueda acceder-->
                 <img src="../<?php echo $row['1'];?>"  width="400" height="200" >
-                <h4 id="tNoticia"><a data-toggle="modal" data-target="#exampleModalCenter<?php echo $row[0] ?>"><?php echo $row[1] ?></a></h4>
-                <p><?php echo $row[2] ?></p>
-                <p id="lMas" data-toggle="modal" data-target="#exampleModalCenter<?php echo $row[0] ?>">LEER MAS</p>
+                <h1><?php echo $row[2] ?></h1>
+                <p><?php echo $row[3] ?> </p>
+                <?php echo $row[4] ?>
               </div>
             </div>
           <?php } mysqli_free_result($res);} ?>

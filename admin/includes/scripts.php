@@ -160,6 +160,12 @@ class scripts {
         return $result;
     }
     
+    public function eliminarBolsa($id){
+        include "config.php";
+        $sql = "DELETE FROM bolsa  WHERE id =".$id."";
+        $result = mysqli_query($link, $sql);
+        return $result;
+    }
     
      public function verBolsa(){
         include "config.php";
@@ -170,7 +176,7 @@ class scripts {
          
       public function editarBolsa($id,$title,$descripcion,$text){
         include "config.php";
-        $sql = "UPDATE * FROM bolsa SET  title = '".$title."', descripcion = '".$descripcion."', text = '".$text."' where id = ".$id."";
+        $sql = "UPDATE bolsa SET title = '".$title."', descripcion = '".$descripcion."', text = '".$text."' WHERE id =".$id."";
         $result = mysqli_query($link, $sql);
         return $result;}
 }
