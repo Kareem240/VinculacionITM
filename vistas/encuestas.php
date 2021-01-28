@@ -38,6 +38,16 @@
                 <?php }?>
             </div>
           </li>
+          <br><br>
+          
+          <li>
+            <a>¿Quieres cononocer la bolsa de trabajo para nuestros egresados? Entra </a><a  href="vistas/bolsa.php" ><strong>aqui</strong></a>
+            <div id="faq2" class="collapse" data-parent=".faq-list">
+              <br>
+              
+            </div>
+          </li>
+          
 
         </ul>
 
