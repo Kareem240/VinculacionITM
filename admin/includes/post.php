@@ -198,6 +198,28 @@ function editado(){
                 echo ".";
                 ?><script>eliminado();</script><?php
             break;
+            case 'editarBol':
+                $id=$_POST['id'];
+               
+                $title=$_POST['titulo'];
+                $descripcion=$_POST['descripcion'];
+                $text=$_POST['texto'];
+
+                $scrip->editarBolsa($id,$title,$descripcion,$text);
+                echo ".";
+                ?><script>editado();</script><?php
+            break;
+            
+            case 'agrBolsa':
+            $dir='assets/img/bolsa/'.$_FILES['imagen']['name'];
+            move_uploaded_file($_FILES['imagen']['tmp_name'],"../../".$dir);
+            $title=$_POST['titulo'];
+            $descripcion=$_POST['descripcion'];
+            $text=$_POST['texto'];
+            $scrip->agrBolsa($dir,$title,$descripcion,$text);
+            echo ".";
+            ?><script>agregado();</script><?php
+            break;
     }else{
         header("location: http://localhost/vinculacionitm/admin ");
     }

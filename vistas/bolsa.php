@@ -91,6 +91,43 @@
   <br><br><br><br><br><br><br><br>
  
 
+    <!------inicia parte de la bolsa---->
+    
+       <!-- ======= Inicio noticias ======= -->
+       <section id="noticias" class="noticias section-bg">
+      
+
+    
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <?php 
+          if ($res = mysqli_query($link, "SELECT * FROM bolsa ")) {
+          while($row=mysqli_fetch_array($res)){
+          ?>
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+              <div class="icon-box">
+                <div class="icon"><i class="bx bx-world"></i></div>
+                <!-- se llama a la imagen agregando el ../ para que se pueda acceder-->
+                <img src="../<?php echo $row['1'];?>"  width="400" height="200" >
+                <h4 id="tNoticia"><a data-toggle="modal" data-target="#exampleModalCenter<?php echo $row[0] ?>"><?php echo $row[1] ?></a></h4>
+                <p><?php echo $row[2] ?></p>
+                <p id="lMas" data-toggle="modal" data-target="#exampleModalCenter<?php echo $row[0] ?>">LEER MAS</p>
+              </div>
+            </div>
+          <?php } mysqli_free_result($res);} ?>
+          
+        </div>
+      </div>
+    </section>
+
+   
+      
+    
+    <!---termina parte de la bolsa -->
+    
+    
+    
   <div id="preloader"></div>
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 

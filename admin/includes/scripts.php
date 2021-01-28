@@ -153,4 +153,24 @@ class scripts {
         $result = mysqli_query($link, $sql);
         return $result;
     }
+    public function agrBolsa($dir,$title,$descripcion,$text){
+        include "config.php";
+        $sql = "INSERT INTO bolsa (id,dir,title,descripcion,text) VALUES (NULL, '".$dir."', '".$title."', '".$descripcion."', '".$text."');";
+        $result = mysqli_query($link, $sql);
+        return $result;
+    }
+    
+    
+     public function verBolsa(){
+        include "config.php";
+        $sql = "SELECT * FROM bolsa";
+        $result = mysqli_query($link, $sql);
+        return $result;
+     }
+         
+      public function editarBolsa($id,$title,$descripcion,$text){
+        include "config.php";
+        $sql = "UPDATE * FROM bolsa SET  title = '".$title."', descripcion = '".$descripcion."', text = '".$text."' where id = ".$id."";
+        $result = mysqli_query($link, $sql);
+        return $result;}
 }

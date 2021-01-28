@@ -23,6 +23,7 @@
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="http://localhost/vinculacionitm/admin/vistas/editReporte.php">Reportes</a>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="http://localhost/vinculacionitm/admin/vistas/editEstadistica.php">Estadisticas</a>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="http://localhost/vinculacionitm/admin/vistas/editEncues.php">Egresados</a>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="http://localhost/vinculacionitm/admin/vistas/editBolsa.php">Bolsa</a>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="http://localhost/vinculacionitm/admin/includes/logout.php">Salir</a>
                         </li>
                     </ul>
