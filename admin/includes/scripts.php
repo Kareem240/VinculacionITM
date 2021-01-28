@@ -82,7 +82,6 @@ class scripts {
     public function AgregarDesta($nombre, $carrera, $desc, $dir){
         include "config.php";
         $sql = "INSERT INTO destacados (nombre, carrera, text, dirimg) VALUES ('".$nombre."', '".$carrera."', '".$desc."', '".$dir."');";
-        echo "Llego :". $sql;
         $result = mysqli_query($link, $sql);
         return $result;
     }

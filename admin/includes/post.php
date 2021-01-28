@@ -1,3 +1,42 @@
+<script src=script/jquery-3.5.1.min.js></script>
+<script src=script/sweetalert2.all.min.js></script>
+
+<script> 
+function eliminado(){
+  Swal.fire({
+  title: 'Elemento eliminado!',
+  text: 'Cick para continuar',
+  icon: 'error',
+  confirmButtonText: 'OK'
+}).then(function() {
+    window.location = "http://localhost/vinculacionitm/admin/";
+});
+}
+
+function agregado(){
+  Swal.fire({
+  title: 'Elemento agregado!',
+  text: 'Cick para continuar',
+  icon: 'success',
+  confirmButtonText: 'OK'
+}).then(function() {
+    window.location = "http://localhost/vinculacionitm/admin/";
+});
+}
+
+function editado(){
+  Swal.fire({
+  title: 'Elemento editado!',
+  text: 'Cick para continuar',
+  icon: 'success',
+  confirmButtonText: 'OK'
+}).then(function() {
+    window.location = "http://localhost/vinculacionitm/admin/";
+});
+}
+
+</script>
+
 <?php 
     include 'scripts.php';
     $scrip = new scripts();
@@ -8,44 +47,46 @@
             move_uploaded_file($_FILES['imagen']['tmp_name'],"../../".$dir);
             $text=$_POST['text'];
             $scrip->nuevo($dir,$text);
-            header("location: http://localhost/vinculacionitm/admin/vistas/editCarru.php ");
+            echo ".";
+            ?><script>agregado();</script><?php
         break;
 
         case 'editar':
             $dir="";
             $id=$_POST['id'];
             $text=$_POST['text'];
-            echo "Llego ".$_FILES['imagen']['name'];
             if(empty($_FILES['imagen']['name'])){
                 $dir=$_POST['dir'];
-                echo "Se va a guardar la misma direccion ".$dir;
             }else{
                 $dir='assets/img/carousel/'.$_FILES['imagen']['name'];
                 move_uploaded_file($_FILES['imagen']['tmp_name'],"../../".$dir);
-                echo "Nueva  direccion ".$dir;
             }
             $scrip->edSlide($id,$dir,$text);
-            header("location: http://localhost/vinculacionitm/admin/vistas/editCarru.php ");
+            echo ".";
+            ?><script>editado();</script><?php
+           
         break;
 
         case 'eliminar':
             $id=$_POST['id'];
             $scrip->eliminar($id);
-            echo "<h1>Se elimino el Slide</h1>";
-            echo "<a href='http://localhost/vinculacionitm/admin/vistas/editCarru.php' class='badge  badge-success'> Regresar </a>";
+            echo ".";
+            ?><script>eliminado();</script><?php
         break;
 
         case 'editarStad':
             $id=$_POST['id'];
             $val=$_POST['val'];
             $scrip->edStad($id,$val);
-            header("location: http://localhost/vinculacionitm/admin/vistas/editEstadistica.php ");
+            echo ".";
+            ?><script>editado();</script><?php
         break;
             
         case 'elimEncues':
             $id=$_POST['id'];
             $scrip->elimEncues($id);
-            header("location: http://localhost/vinculacionitm/admin/vistas/editEncues.php ");
+            echo ".";
+            ?><script>eliminado();</script><?php
         break;
 
         
@@ -54,14 +95,16 @@
             $nombre=$_POST['nombre'];
             $url=$_POST['url'];
             $scrip->edEncues($id,$nombre,$url);
-            header("location: http://localhost/vinculacionitm/admin/vistas/editEncues.php ");
+            echo ".";
+            ?><script>editado();</script><?php
         break;
 
         case 'agrEncues':
             $nombre=$_POST['nombre'];
             $url=$_POST['url'];
             $scrip->agrEncues($nombre,$url);
-            header("location: http://localhost/vinculacionitm/admin/vistas/editEncues.php ");
+            echo ".";
+            ?><script>agregado();</script><?php
         break;
 
             case 'agregarReporte':
@@ -71,7 +114,8 @@
             $descripcion=$_POST['descripcion'];
             $opc=$_POST['opc'];
             $scrip->nuevoReporte($carrera,$descripcion,$dir,$opc);
-            header("location: http://localhost/vinculacionitm/admin/vistas/editReporte.php ");
+            echo ".";
+            ?><script>agregado();</script><?php
         break;
             
         case 'editarRep':
@@ -82,14 +126,13 @@
             echo "Llego ".$_FILES['imagen']['name'];
             if(empty($_FILES['imagen']['name'])){
                 $dir=$_POST['dir'];
-                echo "Se va a guardar la misma direccion ".$dir;
             }else{
                 $dir='assets/img/reportes/'.$_FILES['imagen']['name'];
                 move_uploaded_file($_FILES['imagen']['tmp_name'],"../../".$dir);
-                echo "Nueva  direccion ".$dir;
             }
             $scrip->editarRep($id,$dir,$descripcion);
-            header("location: http://localhost/vinculacionitm/admin/vistas/editReporte.php ");
+            echo ".";
+            ?><script>editado();</script><?php
         break;
 
         //DESTACADOS
@@ -100,7 +143,8 @@
             $nombre=$_POST['nombre'];
             $descripcion=$_POST['text'];
             $scrip->AgregarDesta($nombre,$carrera,$descripcion,$dirimg);
-            header("location: http://localhost/vinculacionitm/admin/vistas/ediDestacados.php ");
+            echo ".";
+            ?><script>agregado();</script><?php
         break;
 
         case 'editarDesta':
@@ -109,23 +153,23 @@
             $nombre=$_POST['nombre'];
             $carrera=$_POST['carrera'];
             $text=$_POST['text'];
-            echo "Llego ".$_FILES['imagen']['name'];
             if(empty($_FILES['imagen']['name'])){
                 $dir=$_POST['dir'];
-                echo "Se va a guardar la misma direccion ".$dir;
             }else{
                 $dir='assets/img/carousel/'.$_FILES['imagen']['name'];
                 move_uploaded_file($_FILES['imagen']['tmp_name'],"../../".$dir);
-                echo "Nueva  direccion ".$dir;
+                
             }
             $scrip->edDest($id, $nombre,$carrera, $text, $dir);
-            header("location: http://localhost/vinculacionitm/admin/vistas/ediDestacados.php ");
+            echo ".";
+            ?><script>editado();</script><?php
             break;
 
             case 'eliminarDesta':
                 $id=$_POST['id'];
                 $scrip->eliminarDesta($id);
-                header("location: http://localhost/vinculacionitm/admin/vistas/ediDestacados.php");
+                echo ".";
+            ?><script>eliminado();</script><?php
             break;
             //noticias
             case 'agregarNoti':
@@ -133,7 +177,8 @@
             $descripcion=$_POST['descripcion'];
             $text=$_POST['texto'];
             $scrip->nuevaNoti($title,$descripcion,$text);
-            header("location: http://localhost/vinculacionitm/admin/vistas/editNot2.php ");
+            echo ".";
+            ?><script>agregado();</script><?php
             break;
 
             case 'editarNoti':
@@ -143,16 +188,17 @@
                 $text=$_POST['texto'];
 
                 $scrip->edNoticias($id,$title,$descripcion,$text);
-                header("location: http://localhost/vinculacionitm/admin/vistas/editNot2.php ");
+                echo ".";
+            ?><script>editado();</script><?php
             break;
 
             case 'eliminarNoti':
                 $id=$_POST['id'];
                 $scrip->eliminarNoticia($id);
-                header("location: http://localhost/vinculacionitm/admin/vistas/editNot2.php ");
+                echo ".";
+                ?><script>eliminado();</script><?php
             break;
     }else{
-        echo "Estas pendejo";
         header("location: http://localhost/vinculacionitm/admin ");
     }
 ?>

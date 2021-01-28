@@ -5,6 +5,7 @@
 
   <main id="main">
 
+    
     <!-- Carrusel principal-->
     <?php include  'vistas/carrusel.php'?>
 
