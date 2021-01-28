@@ -8,7 +8,10 @@
           <p>¿Eres egresado del ITM? Puedes participar en nuestra encuesta para mejorar la informacion de esta pagina, ademas si quieres conocer ofertas de empleo aqui lo puedes consultar.</p>
           
         </div>
-        
+        <div class="row">
+          <div class="col-lg-15" data-aos="zoom-out" data-aos-delay="200">
+            <img src="assets/img/egresados.png" class="img-fluid" alt="">
+          </div>
         
         <?php
     $nom=[];

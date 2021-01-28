@@ -1,4 +1,5 @@
 <link href="css/style.css" rel="stylesheet">
+<link href="../assets/img/vinculacion.svg" rel="icon">
 <?php
 // Initialize the session
 session_start();
@@ -95,13 +96,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <meta charset="UTF-8">
     <title>Admin Vinculacion</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
-    <style type="text/css">
-        body{ font: 14px sans-serif; }
-        .wrapper{ width: 350px; padding: 20px; }
-    </style>
+    <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-    <div class="box">
+    <div class="box" >
         <h2>Vinculacion ITM</h2>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
@@ -117,7 +115,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Ingresar">
             </div>
-            <p>¿No tienes una cuenta? <a href="vistas/register.php">Regístrate ahora</a>.</p>
         </form>
     </div>    
 </body>

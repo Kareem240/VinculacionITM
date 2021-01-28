@@ -3,4 +3,6 @@
     width: 400px;
     left: 40%;
     margin-left: -100px;
+    justify-content: center;
+    align-items: center;
  }
