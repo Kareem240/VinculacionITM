@@ -71,16 +71,11 @@
     <div class="container d-flex align-items-center">
 
       <img src="../assets/img/anfei.png" alt="" width="105" height="83" />
-      <h1 class="logo mr-auto"><a href="index.html">VINCULACION ITM</a></h1>
+      <h1 class="logo mr-auto"><a >Bolsa de trabajo ITM</a></h1>
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="#inicio">Inicio</a></li>
-          <li><a href="http://localhost/vinculacion/#noticias">Noticias</a></li>
-          <li><a href="http://localhost/vinculacion/#testimonials">Testimonios</a></li>
-          <li><a href="http://localhost/vinculacion/#nosotros">Nosotros</a></li>
-          <li><a href="http://localhost/vinculacion/#reportes">Reportes</a></li>
-          <li><a href="http://localhost/vinculacion/#encuestas">Colabora</a></li>
-          <li><a href="http://localhost/vinculacion/#contacto">Contacto</a></li>
+          <li><a href="../">Regresar a la pagina principal</a></li>
+          
         </ul>
       </nav><!-- .nav-menu -->
 
